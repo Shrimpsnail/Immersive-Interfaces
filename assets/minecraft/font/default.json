@@ -1,0 +1,118 @@
+{
+    "providers": [
+    {
+        "type": "space",
+        "advances": {
+            "\uE999": -8
+        }
+    },
+    {
+        "type": "space",
+        "advances": {
+            "\uE998": 1
+        }
+    },
+    {
+        "type": "space",
+        "advances": {
+            "\uE995": -1
+        }
+    },
+    {
+        "type": "space",
+        "advances": {
+            "\uE997": 4
+        }
+    },
+    {
+        "type": "space",
+        "advances": {
+            "\uE996": -4
+        }
+    },
+    {
+        "type": "space",
+        "advances": {
+            "\uE994": -16
+        }
+    },
+
+
+
+	{ 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/chest.png",
+        "height": 91, "ascent": 23,
+        "chars": ["\uEC01"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/chest_minecart.png",
+        "height": 105, "ascent": 23,
+        "chars": ["\uEC02"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/barrel.png",
+        "height": 83, "ascent": 14,
+        "chars": ["\uEC03"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/ender_chest.png",
+        "height": 91, "ascent": 23,
+        "chars": ["\uEC04"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/large_chest.png",
+        "height": 158, "ascent": 34,
+        "chars": ["\uEC05"]
+    },
+
+
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/hopper_minecart.png",
+        "height": 68, "ascent": 14,
+        "chars": ["\uEC10"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/enchanting_table_corner.png",
+        "height": 125, "ascent": 14,
+        "chars": ["\uEc11"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/furnace_hat.png",
+        "height": 18, "ascent": 18,
+        "chars": ["\uEc12"]
+    },
+
+
+
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/villagers/base_trades.png",
+        "height": 166, "ascent": 13,
+        "chars": ["\uEe01"]
+    },{ 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/villagers/base_counter.png",
+        "height": 166, "ascent": 13,
+        "chars": ["\uEe02"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/villagers/libr_trades.png",
+        "height": 166, "ascent": 13,
+        "chars": ["\uEe03"]
+    },{ 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/villagers/libr_counter.png",
+        "height": 166, "ascent": 13,
+        "chars": ["\uEe04"]
+    }
+    ]
+}
