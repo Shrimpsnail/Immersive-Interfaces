@@ -106,12 +106,12 @@
     { 
         "type": "bitmap",
         "file": "minecraft:gui/container/villagers/libr_trades.png",
-        "height": 166, "ascent": 13,
+        "height": 167, "ascent": 14,
         "chars": ["\uEe03"]
     },{ 
         "type": "bitmap",
         "file": "minecraft:gui/container/villagers/libr_counter.png",
-        "height": 166, "ascent": 13,
+        "height": 167, "ascent": 14,
         "chars": ["\uEe04"]
     }
     ]
