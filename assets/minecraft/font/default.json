@@ -89,6 +89,12 @@
         "height": 18, "ascent": 18,
         "chars": ["\uEc12"]
     },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/smoker_hat.png",
+        "height": 18, "ascent": 18,
+        "chars": ["\uEc13"]
+    },
 
 
 
