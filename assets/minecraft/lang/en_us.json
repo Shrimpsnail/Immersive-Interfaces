@@ -39,9 +39,5 @@
 	"entity.minecraft.villager.toolsmith": "§f\uEe01\uE995\uEe02",
 	"entity.minecraft.villager.weaponsmith": "§f\uEe01\uE995\uEe02",
 
-	"merchant.title": "§f\uE994\uE994\uE994\uE994\uE994\uE995\uE995\uE995\uE995\uE999\uE999\uE998%s",
-
-
-
-	"gui.recipebook.search_hint": "§9Search..."
+	"merchant.title": "§f\uE994\uE994\uE994\uE994\uE994\uE995\uE995\uE995\uE995\uE999\uE999\uE998%s"
 }
