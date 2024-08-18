@@ -25,19 +25,23 @@
 	"merchant.level.4": "Expert",
 	"merchant.level.5": "Master",
 
-	"entity.minecraft.villager.armorer": "§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.butcher": "§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.cartographer": "§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.cleric": "§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.farmer": "§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.fisherman": "§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.fletcher": "§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.leatherworker": "§f\uEe01\uE995\uEe02",
+	"entity.minecraft.villager.template": "§f\uEe01\uE995\uEe02",
 	"entity.minecraft.villager.librarian": "§f\uEe03\uE995\uEe04",
-	"entity.minecraft.villager.mason": "§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.shepherd": "§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.toolsmith": "§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.weaponsmith": "§f\uEe01\uE995\uEe02",
+
+	"entity.minecraft.villager.armorer": "§fArmorer",
+	"entity.minecraft.villager.butcher": "§fButcher",
+	"entity.minecraft.villager.cartographer": "§fCartographer",
+	"entity.minecraft.villager.cleric": "§fCleric",
+	"entity.minecraft.villager.farmer": "§fFarmer",
+	"entity.minecraft.villager.fisherman": "§fFisherman",
+	"entity.minecraft.villager.fletcher": "§fFletcher",
+	"entity.minecraft.villager.leatherworker": "§fLeatherworker",
+	"entity.minecraft.villager.mason": "§fMason",
+	"entity.minecraft.villager.shepherd": "§fShepherd",
+	"entity.minecraft.villager.toolsmith": "§fToolsmith",
+	"entity.minecraft.villager.weaponsmith": "§fWeaponsmith",
+
+	"entity.minecraft.wandering_trader": "§f\uE994\uE994\uE994\uE994\uE994\uE995\uE995\uE995\uE995\uE999\uE999\uE998\uEe01\uE995\uEe02",
 
 	"merchant.title": "§f\uE994\uE994\uE994\uE994\uE994\uE995\uE995\uE995\uE995\uE999\uE999\uE998%s"
 }
