@@ -95,7 +95,12 @@
         "height": 18, "ascent": 18,
         "chars": ["\uEc13"]
     },
-
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/crafter_hatncorner.png",
+        "height": 80, "ascent": 25,
+        "chars": ["\uEc14"]
+    },
 
 
     { 
