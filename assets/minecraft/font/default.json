@@ -101,6 +101,12 @@
         "height": 80, "ascent": 25,
         "chars": ["\uEc14"]
     },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/smithing_corner.png",
+        "height": 125, "ascent": 22,
+        "chars": ["\uEc15"]
+    },
 
 
     { 
