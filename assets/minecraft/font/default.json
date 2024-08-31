@@ -39,36 +39,76 @@
 
 
 
+
+
 	{ 
         "type": "bitmap",
-        "file": "minecraft:gui/container/chest.png",
+        "file": "minecraft:gui/container/chests/chest.png",
         "height": 91, "ascent": 23,
         "chars": ["\uEC01"]
     },
     { 
         "type": "bitmap",
-        "file": "minecraft:gui/container/chest_minecart.png",
+        "file": "minecraft:gui/container/chests/chest_minecart.png",
         "height": 105, "ascent": 23,
         "chars": ["\uEC02"]
     },
     { 
         "type": "bitmap",
-        "file": "minecraft:gui/container/barrel.png",
+        "file": "minecraft:gui/container/chests/barrel.png",
         "height": 83, "ascent": 14,
         "chars": ["\uEC03"]
     },
     { 
         "type": "bitmap",
-        "file": "minecraft:gui/container/ender_chest.png",
+        "file": "minecraft:gui/container/chests/ender_chest.png",
         "height": 91, "ascent": 23,
         "chars": ["\uEC04"]
     },
     { 
         "type": "bitmap",
-        "file": "minecraft:gui/container/large_chest.png",
+        "file": "minecraft:gui/container/chests/large_chest.png",
         "height": 158, "ascent": 34,
         "chars": ["\uEC05"]
     },
+
+
+
+
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/chests_slots/chest.png",
+        "height": 91, "ascent": 23,
+        "chars": ["\uED01"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/chests_slots/chest_minecart.png",
+        "height": 105, "ascent": 23,
+        "chars": ["\uED02"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/chests_slots/barrel.png",
+        "height": 83, "ascent": 14,
+        "chars": ["\uED03"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/chests_slots/ender_chest.png",
+        "height": 91, "ascent": 23,
+        "chars": ["\uED04"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/chests_slots/large_chest.png",
+        "height": 158, "ascent": 34,
+        "chars": ["\uED05"]
+    },
+
+
+
+
 
 
     { 

@@ -2,5 +2,11 @@
 	"pack": {
 		"pack_format": 34,
 		"description": "§7Completely overhauled UI\n§9GitHub §8 | By Shrimpsnail"
+	},
+	"language":{
+		"en_ut":{
+		"name":"English",
+		"region":"UI Slots"
+		}
 	}
 }
