@@ -1,9 +1,13 @@
-## Welcome to the Immersive Interfaces / Immersive UI resource pack repository!
+## Welcome to the Immersive Interfaces resource pack repository!
 
-The Resource pack is not yet available through other means and is a heavy work in progress, and as such will only be available here for now. Any other releases have not been approved by me 
-
+The Resource pack is available publickly in the websites below and only these are official, this repository is for managing and incase anyone wishes to test features. 
 If you wish to give it a test run feel free to download it and give your feedback!
 
+### Official downloads
+
+https://www.planetminecraft.com/texture-pack/shrimp-s-immersive-interfaces/ (links to the other 2)
+https://www.curseforge.com/minecraft/texture-packs/shrimps-immersive-interfaces
+https://modrinth.com/resourcepack/shrimps-immersive-interfaces
 
 > [!WARNING]
 > To use the pack it must be extracted from the downloaded file the final folder structure should be resourcepacks \ Immersive-Interfaces \ assets + pack.mcmeta
