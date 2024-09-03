@@ -147,7 +147,12 @@
         "height": 125, "ascent": 22,
         "chars": ["\uEc15"]
     },
-
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/loom_hat.png",
+        "height": 99, "ascent": 30,
+        "chars": ["\uEc16"]
+    },
 
     { 
         "type": "bitmap",
