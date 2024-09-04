@@ -1,12 +1,12 @@
 {
 	"pack": {
 		"pack_format": 34,
-		"description": "§7Completely overhauled UI\n§9GitHub §8 | By Shrimpsnail"
+		"description": "§7Completely overhauled UI\n§9§4Beta V0.2 §8 | By Shrimpsnail"
 	},
 	"language":{
-		"en_ut":{
-		"name":"English",
-		"region":"UI Slots"
+		"en_usslot":{
+		"name":"English (UI Slots)",
+		"region":"US"
 		}
 	}
 }
