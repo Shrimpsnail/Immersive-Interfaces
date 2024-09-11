@@ -1,6 +1,7 @@
 {
 	"pack": {
-		"pack_format": 34,
+		"pack_format": 15,
+		"supported_formats": [15,34],
 		"description": "§7Completely overhauled UI\n§9GitHub §8 | By Shrimpsnail"
 	},
 	"language":{
@@ -8,5 +9,13 @@
 		"name":"English",
 		"region":"UI Slots"
 		}
-	}
+	},
+	"overlays": {
+		"entries": [
+			{
+				"directory": "main",
+				"formats": [27,34]
+      		}
+		]
+  	}
 }

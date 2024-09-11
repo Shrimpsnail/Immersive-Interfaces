@@ -1,0 +1,48 @@
+{
+
+	"container.chest":					"§f\uE999\uE996\uEd01",
+	"entity.minecraft.chest_minecart":	"§f\uE999\uE999\uE998\uEd02",
+	"container.barrel":                 "§f\uE999\uEd03",
+	"container.enderchest":				"§f\uE999\uE996\uEd04",
+	"container.chestDouble":			"§f\uE999\uE999\uE996\uEd05",
+
+
+	"container.crafting": 			"",
+	"container.crafter": 			"§f\uE997\uE997\uE997\uE998\uEc14",
+	"container.inventory": 			"",
+	"container.furnace": 			"§f\uE999\uE999\uE999\uE999\uE996\uE995\uE999\uEc12",
+	"container.smoker": 			"§f\uE999\uE999\uE999\uE999\uE996\uE995\uE995\uE999\uEc13",
+	"container.repair": 			"",
+	"container.upgrade": 			"§f\uE999\uE999\uE999\uE999\uE999\uE999\uE999\uE999\uE999\uE995\uE995\uE996\uEc15",
+	"container.brewing": 			"§f\uE994\uE994\uE994\uE994\uE994\uE994\uE994\uE994\uE994\uE994\uE994\uE994\uE994\uE994\uE994\uE994\uE994\uE994\uE994\uE995\uE995\uE995\uEc17",
+	"container.loom": 				"§f\uE999\uE999\uE999\uE995\uE998\uE998\uEc16",
+	"container.hopper":				"",
+	"container.grindstone_title":	"",
+	"container.enchant":			"§f\uE999\uE999\uE999\uE999\uE999\uE995\uE995\uEc11",
+	
+	"entity.minecraft.hopper_minecart":	"§f\uE999\uE999\uE999\uE997\uEc10",
+
+
+
+	"merchant.trades": "",
+
+	"entity.minecraft.villager.template": 		"§f\uEe01\uE995\uEe02",
+	"entity.minecraft.villager.librarian": 		"§f\uEe03\uE995\uEe04",
+
+	"entity.minecraft.villager.armorer": 		"§f\uEe01\uE995\uEe02",
+	"entity.minecraft.villager.butcher": 		"§f\uEe01\uE995\uEe02",
+	"entity.minecraft.villager.cartographer": 	"§f\uEe01\uE995\uEe02",
+	"entity.minecraft.villager.cleric": 		"§f\uEe01\uE995\uEe02",
+	"entity.minecraft.villager.farmer": 		"§f\uEe01\uE995\uEe02",
+	"entity.minecraft.villager.fisherman": 		"§f\uEe01\uE995\uEe02",
+	"entity.minecraft.villager.fletcher": 		"§f\uEe01\uE995\uEe02",
+	"entity.minecraft.villager.leatherworker": 	"§f\uEe01\uE995\uEe02",
+	"entity.minecraft.villager.mason": 			"§f\uEe01\uE995\uEe02",
+	"entity.minecraft.villager.shepherd": 		"§f\uEe01\uE995\uEe02",
+	"entity.minecraft.villager.toolsmith": 		"§f\uEe01\uE995\uEe02",
+	"entity.minecraft.villager.weaponsmith": 	"§f\uEe01\uE995\uEe02",
+
+	"entity.minecraft.wandering_trader": "§f\uE994\uE994\uE994\uE994\uE994\uE995\uE995\uE995\uE995\uE999\uE999\uE998\uEe01\uE995\uEe02",
+	
+	"merchant.title": "§f\uE994\uE994\uE994\uE994\uE994\uE995\uE995\uE995\uE995\uE999\uE999\uE998%s"
+}
