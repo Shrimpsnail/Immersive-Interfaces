@@ -159,6 +159,12 @@
         "height": 166, "ascent": 13,
         "chars": ["\uEc17"]
     },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/blast_furnace_hat.png",
+        "height": 35, "ascent": 35,
+        "chars": ["\uEc18"]
+    },
 
 
 
