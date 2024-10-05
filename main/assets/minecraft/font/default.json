@@ -165,6 +165,18 @@
         "height": 35, "ascent": 35,
         "chars": ["\uEc18"]
     },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/dispenser_block.png",
+        "height": 112, "ascent": 45,
+        "chars": ["\uEc19"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/dropper_block.png",
+        "height": 112, "ascent": 45,
+        "chars": ["\uEc20"]
+    },
 
 
 

@@ -5,9 +5,9 @@
 		"description": "§7Completely overhauled UI\n§9GitHub §8 | By Shrimpsnail"
 	},
 	"language":{
-		"en_ut":{
-		"name":"English",
-		"region":"UI Slots"
+		"en_us-slot":{
+		"name":"English §a[Chest Slots]§f",
+		"region":"US"
 		}
 	},
 	"overlays": {
