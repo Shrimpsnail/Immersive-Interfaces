@@ -177,6 +177,12 @@
         "height": 112, "ascent": 45,
         "chars": ["\uEc20"]
     },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/container/cartography_lantern.png",
+        "height": 32, "ascent": 27,
+        "chars": ["\uEc21"]
+    },
 
 
 
