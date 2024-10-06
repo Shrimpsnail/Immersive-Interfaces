@@ -1,10 +1,10 @@
 {
 
-	"container.chest":					"§f\uE999\uE996\uEc01",
-	"entity.minecraft.chest_minecart":	"§f\uE999\uE999\uE998\uEc02",
-	"container.barrel":                 "§f\uE999\uEc03",
-	"container.enderchest":				"§f\uE999\uE996\uEc04",
-	"container.chestDouble":			"§f\uE999\uE999\uE996\uEc05",
+	"container.chest":					"§f\uE999\uE996\uEd01",
+	"entity.minecraft.chest_minecart":	"§f\uE999\uE999\uE998\uEd02",
+	"container.barrel":                 "§f\uE999\uEd03",
+	"container.enderchest":				"§f\uE999\uE996\uEd04",
+	"container.chestDouble":			"§f\uE999\uE999\uE996\uEd05",
 
 
 	"container.crafting": 			"",
@@ -21,8 +21,8 @@
 	"container.grindstone_title":	"",
 	"container.cartography_table":	"§f\uE997\uE997\uE997\uE997\uE997\uE995\uEc21",
 	"container.enchant":			"§f\uE999\uE999\uE999\uE999\uE999\uE995\uE995\uEc11",
-	"container.dispenser":	"§f\uE998\uEc19",
-	"container.dropper":	"§f\uE998\uEc20",
+	"container.dispenser":			"§f\uE998\uEc19",
+	"container.dropper":			"§f\uE998\uEc20",
 	
 	"entity.minecraft.hopper_minecart":	"§f\uE999\uE999\uE999\uE997\uEc10",
 
