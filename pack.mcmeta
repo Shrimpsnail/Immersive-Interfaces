@@ -1,12 +1,17 @@
 {
 	"pack": {
 		"pack_format": 15,
-		"supported_formats": [15,34],
+		"supported_formats": [15,57],
 		"description": "§7Completely overhauled UI\n§9GitHub §8 | By Shrimpsnail"
 	},
 	"language":{
+
 		"en_us-slot":{
 		"name":"English §a[Chest Slots]§f",
+		"region":"US"
+		},
+		"en_us-mods":{
+		"name":"English §a[Modded]§f",
 		"region":"US"
 		}
 	},
@@ -14,7 +19,7 @@
 		"entries": [
 			{
 				"directory": "main",
-				"formats": [27,34]
+				"formats": [18,57]
       		}
 		]
   	}

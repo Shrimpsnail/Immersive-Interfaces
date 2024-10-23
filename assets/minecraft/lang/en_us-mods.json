@@ -1,0 +1,58 @@
+{
+
+	"container.chest":					"",
+	"entity.minecraft.chest_minecart":	"",
+	"container.barrel":                 "",
+	"container.enderchest":				"",
+	"container.chestDouble":			"",
+
+
+	"container.crafting": 			"",
+	"container.crafter": 			"",
+	"container.inventory": 			"",
+	"container.furnace": 			"",
+	"container.smoker": 			"",
+	"container.blast_furnace": 		"",
+	"container.repair": 			"",
+	"container.upgrade": 			"",
+	"container.brewing": 			"",
+	"container.loom": 				"",
+	"container.hopper":				"",
+	"container.grindstone_title":	"",
+	"container.cartography_table":	"",
+	"container.enchant":			"",
+	"container.dispenser":			"",
+	"container.dropper":			"",
+	
+	"entity.minecraft.hopper_minecart":	"",
+
+
+
+
+
+	"merchant.level.1": "",
+	"merchant.level.2": "",
+	"merchant.level.3": "",
+	"merchant.level.4": "",
+	"merchant.level.5": "",
+	"merchant.trades": "",
+
+	"entity.minecraft.villager.template": 		"",
+	"entity.minecraft.villager.librarian": 		"",
+	"entity.minecraft.villager.armorer": 		"",
+	"entity.minecraft.villager.butcher": 		"",
+	"entity.minecraft.villager.cartographer": 	"",
+	"entity.minecraft.villager.cleric": 		"",
+	"entity.minecraft.villager.farmer": 		"",
+	"entity.minecraft.villager.fisherman": 		"",
+	"entity.minecraft.villager.fletcher": 		"",
+	"entity.minecraft.villager.leatherworker": 	"",
+	"entity.minecraft.villager.mason": 			"",
+	"entity.minecraft.villager.shepherd": 		"",
+	"entity.minecraft.villager.toolsmith": 		"",
+	"entity.minecraft.villager.weaponsmith": 	"",
+
+	"entity.minecraft.wandering_trader": "",
+
+	"merchant.title": ""
+}

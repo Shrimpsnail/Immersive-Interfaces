@@ -1,0 +1,22 @@
+{  
+  "target_type": "menu_class",  
+  "target": "net.minecraft.class_3935", 
+  "sprites": [  
+    {  
+      "x": -125,  
+      "y": -94,  
+      "z": -500,  
+      "width": 133,  
+      "height": 166,  
+      "texture": "minecraft:interfaces/brewing_guide"
+    }  
+  ],
+  "texts": [  
+    {  
+      "x": -125,  
+      "y": -94,  
+      "z": -500, 
+      "text": "testtest"
+    }  
+  ]
+}

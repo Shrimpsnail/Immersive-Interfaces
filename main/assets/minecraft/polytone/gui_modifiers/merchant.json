@@ -1,0 +1,16 @@
+{  
+  "target_type": "menu_id",  
+  "target": "merchant",  
+  "title_y_offset": -2000,
+  "label_y_offset": -2000,
+  "sprites": [  
+    {  
+      "x": -133,  
+      "y": -65,  
+      "z": -500,  
+      "width": 88,  
+      "height": 138,  
+      "texture": "minecraft:interfaces/trades"
+    }  
+  ]  
+}
