@@ -1,6 +1,6 @@
 {  
   "target_type": "menu_class",  
-  "target": "no_net.minecraft.class_3935", 
+  "target": "no_net.minecraft.class_473", 
   "sprites": [  
     {  
       "x": -125,  
@@ -8,7 +8,7 @@
       "z": -500,  
       "width": 133,  
       "height": 166,  
-      "texture": "minecraft:interfaces/brewing_guide"
+      "texture": "textures/interfaces/brewing_guide.png"
     }  
   ],
   "texts": [  
@@ -16,7 +16,7 @@
       "x": -125,  
       "y": -94,  
       "z": -500, 
-      "text": "testtest"
+      "text": "testtest.png"
     }  
   ]
 }

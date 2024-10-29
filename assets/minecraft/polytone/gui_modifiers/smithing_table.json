@@ -1,0 +1,16 @@
+{  
+  "target_type": "menu_id",  
+  "target": "smithing",  
+  "title_y_offset": -2000,
+  "label_y_offset": -2000,
+  "sprites": [  
+    {  
+      "x": -122,  
+      "y": -83,  
+      "z": -500,  
+      "width": 34,  
+      "height": 125,  
+      "texture": "textures/interfaces/smithing_corner.png"
+    }  
+  ]  
+}

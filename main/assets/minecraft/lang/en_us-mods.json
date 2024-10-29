@@ -74,5 +74,8 @@
     "merchant.level.3": "Journeyman",
     "merchant.level.4": "Expert",
     "merchant.level.5": "Master",
-    "merchant.title": ""
+
+	"merchant.title": "%s - %s"
+    
+  
 }

@@ -1,0 +1,16 @@
+{  
+  "target_type": "menu_id",  
+  "target": "smoker",  
+  "title_y_offset": -2000,
+  "label_y_offset": -2000,
+  "sprites": [  
+    {  
+      "x": -62,  
+      "y": -88,  
+      "z": -500,  
+      "width": 76,  
+      "height": 18,  
+      "texture": "textures/interfaces/smoker_hat.png"
+    }  
+  ]  
+}

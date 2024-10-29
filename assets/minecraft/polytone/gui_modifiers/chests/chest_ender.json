@@ -1,0 +1,16 @@
+{  
+  "target_type": "screen_title",  
+  "target": "container.enderchest",  
+  "title_y_offset": -2000,
+  "label_y_offset": -2000,
+  "sprites": [  
+    {  
+      "x": -92,  
+      "y": -94,  
+      "z": -500,  
+      "width": 184,  
+      "height": 91,  
+      "texture": "textures/interfaces/chests/ender_chest.png"
+    }  
+  ]  
+}
