@@ -28,23 +28,23 @@
 
 
 
-	"merchant.trades": "",
+	"merchant.trades": "§f\uE996\uE995\uE995\uE995\uEe00",
 
 	"entity.minecraft.villager.template": 		"§f\uEe01\uE995\uEe02",
 	"entity.minecraft.villager.librarian": 		"§f\uEe03\uE995\uEe04",
 
-	"entity.minecraft.villager.armorer": 		"§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.butcher": 		"§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.cartographer": 	"§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.cleric": 		"§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.farmer": 		"§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.fisherman": 		"§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.fletcher": 		"§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.leatherworker": 	"§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.mason": 			"§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.shepherd": 		"§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.toolsmith": 		"§f\uEe01\uE995\uEe02",
-	"entity.minecraft.villager.weaponsmith": 	"§f\uEe01\uE995\uEe02",
+	"entity.minecraft.villager.armorer": 		"",
+	"entity.minecraft.villager.butcher": 		"",
+	"entity.minecraft.villager.cartographer": 	"",
+	"entity.minecraft.villager.cleric": 		"",
+	"entity.minecraft.villager.farmer": 		"",
+	"entity.minecraft.villager.fisherman": 		"",
+	"entity.minecraft.villager.fletcher": 		"",
+	"entity.minecraft.villager.leatherworker": 	"",
+	"entity.minecraft.villager.mason": 			"",
+	"entity.minecraft.villager.shepherd": 		"",
+	"entity.minecraft.villager.toolsmith": 		"",
+	"entity.minecraft.villager.weaponsmith": 	"",
 
 	"entity.minecraft.wandering_trader": "§f\uE994\uE994\uE994\uE994\uE994\uE995\uE995\uE995\uE995\uE999\uE999\uE998\uEe01\uE995\uEe02",
 

@@ -190,6 +190,13 @@
 
     { 
         "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/trades.png",
+        "height": 140, "ascent": -5,
+        "chars": ["\uEe00"]
+    },
+
+    { 
+        "type": "bitmap",
         "file": "minecraft:gui/sprites/interfaces/villagers/base_trades.png",
         "height": 166, "ascent": 13,
         "chars": ["\uEe01"]
@@ -199,6 +206,7 @@
         "height": 166, "ascent": 13,
         "chars": ["\uEe02"]
     },
+
     { 
         "type": "bitmap",
         "file": "minecraft:gui/sprites/interfaces/villagers/libr_trades.png",
