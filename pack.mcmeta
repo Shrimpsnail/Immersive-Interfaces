@@ -6,12 +6,12 @@
 	},
 	"language":{
 
-		"en_us-slot":{
+		"en_us-1slot":{
 		"name":"English §a[Chest Slots]§f",
 		"region":"US"
 		},
-		"en_us-mods":{
-		"name":"English §a[Modded]§f",
+		"en_us-2mods":{
+		"name":"English §a[Modded]§f*",
 		"region":"US"
 		}
 	},
