@@ -1,0 +1,11 @@
+{
+
+	"container.chest":					"§f\uE999\uE996\uEd01",
+	"entity.minecraft.chest_minecart":	"§f\uE999\uE999\uE998\uEd02",
+	"container.barrel":                 "§f\uE999\uEd03",
+	"container.enderchest":				"§f\uE999\uE996\uEd04",
+	"container.chestDouble":			"§f\uE999\uE999\uE996\uEd05",
+	
+	"options.languageAccuracyWarning": "§c* Modded languages require polytone and optigui to work",
+	"options.languageWarning": "§c* Modded languages require polytone and optigui to work"
+}
