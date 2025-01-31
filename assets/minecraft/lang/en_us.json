@@ -24,6 +24,10 @@
 	"container.dispenser":	"§f\uE998\uEc19",
 	"container.dropper":	"§f\uE998\uEc20",
 	
+	"block.minecraft.beacon.primary": "",
+	"block.minecraft.beacon.secondary": "",
+
+	
 	"entity.minecraft.hopper_minecart":	"§f\uE999\uE999\uE999\uE997\uEc10",
 
 
