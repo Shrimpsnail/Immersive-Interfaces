@@ -1,6 +1,6 @@
 {  
   "target_type": "screen_title",  
-  "target": "item.minecraft.oak_chest_boat",  
+  "target": "entity.minecraft.oak_chest_boat",  
   "title_y_offset": -2000,
   "label_y_offset": -2000,
   "sprites": [  

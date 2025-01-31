@@ -36,6 +36,12 @@
             "\uE994": -16
         }
     },
+    {
+        "type": "space",
+        "advances": {
+            "\uE993": 16
+        }
+    },
 
 
 
@@ -104,6 +110,68 @@
         "file": "minecraft:gui/sprites/interfaces/chests_slots/large_chest.png",
         "height": 158, "ascent": 34,
         "chars": ["\uED05"]
+    },
+
+
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/chests/boat_oak.png",
+        "height": 174, "ascent": 23,
+        "chars": ["\uEB01"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/chests/boat_spruce.png",
+        "height": 174, "ascent": 23,
+        "chars": ["\uEB02"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/chests/boat_birch.png",
+        "height": 174, "ascent": 23,
+        "chars": ["\uEB03"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/chests/boat_dark_oak.png",
+        "height": 174, "ascent": 23,
+        "chars": ["\uEB04"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/chests/boat_acacia.png",
+        "height": 174, "ascent": 23,
+        "chars": ["\uEB05"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/chests/boat_jungle.png",
+        "height": 174, "ascent": 23,
+        "chars": ["\uEB06"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/chests/boat_mangrove.png",
+        "height": 174, "ascent": 23,
+        "chars": ["\uEB07"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/chests/boat_cherry.png",
+        "height": 174, "ascent": 23,
+        "chars": ["\uEB08"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/chests/boat_bamboo.png",
+        "height": 174, "ascent": 23,
+        "chars": ["\uEB09"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/chests/boat_pale.png",
+        "height": 174, "ascent": 23,
+        "chars": ["\uEB10"]
     },
 
 
@@ -184,6 +252,25 @@
         "chars": ["\uEc21"]
     },
 
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/beacon_left.png",
+        "height": 152, "ascent": -50,
+        "chars": ["\uEc22"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/beacon_noggin.png",
+        "height": 24, "ascent": 0,
+        "chars": ["\uEc23"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/beacon_right.png",
+        "height": 152, "ascent": 27,
+        "chars": ["\uEc24"]
+    },
+
 
 
 
@@ -217,6 +304,21 @@
         "file": "minecraft:gui/sprites/interfaces/villagers/libr_counter.png",
         "height": 167, "ascent": 14,
         "chars": ["\uEe04"]
+    },
+    
+    
+    
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/big.png",
+        "height": 167, "ascent": 0,
+        "chars": ["\uEc99"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/big.png",
+        "height": 167, "ascent": -163,
+        "chars": ["\uEc98"]
     }
     ]
 }

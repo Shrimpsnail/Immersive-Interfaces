@@ -46,6 +46,16 @@
     "entity.minecraft.hopper_minecart": "Minecart with Hopper",
 
 
+    "entity.minecraft.oak_chest_boat": "Oak Boat with Chest",
+	"entity.minecraft.spruce_chest_boat": "Spruce Boat with Chest",
+	"entity.minecraft.birch_chest_boat": "Birch Boat with Chest",
+	"entity.minecraft.dark_oak_chest_boat": "Dark Oak Boat with Chest",
+	"entity.minecraft.acacia_chest_boat": "Acacia Boat with Chest",
+	"entity.minecraft.jungle_chest_boat": "Jungle Boat with Chest",
+    "entity.minecraft.mangrove_chest_boat": "Mangrove Boat with Chest",
+	"entity.minecraft.cherry_chest_boat": "Cherry Boat with Chest",
+	"entity.minecraft.bamboo_chest_raft": "Bamboo Raft with Chest",
+	"entity.minecraft.pale_oak_chest_boat": "Pale Oak Boat with Chest",
 
 
     "entity.minecraft.villager": "Villager",
