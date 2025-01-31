@@ -18,9 +18,13 @@
 	"overlays": {
 		"entries": [
 			{
-				"directory": "main",
+				"directory": "18",
 				"formats": [18,100]
-      		}
+      		},
+			{
+				"directory": "43",
+				"formats": [43,100]
+			}
 		]
   	}
 }
