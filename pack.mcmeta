@@ -20,7 +20,11 @@
 			{
 				"directory": "main",
 				"formats": [18,100]
-      		}
+      		},
+			{
+				"directory": "43",
+				"formats": [43,100]
+			}
 		]
   	}
 }
