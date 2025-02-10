@@ -18,11 +18,11 @@
 	"overlays": {
 		"entries": [
 			{
-				"directory": "18",
+				"directory": "1.21",
 				"formats": [18,100]
       		},
 			{
-				"directory": "43",
+				"directory": "_1.21.4_sloticons",
 				"formats": [43,100]
 			}
 		]
