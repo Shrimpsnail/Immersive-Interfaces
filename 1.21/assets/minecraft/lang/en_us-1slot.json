@@ -1,10 +1,22 @@
 {
 
-	"container.chest":					"§f\uE999\uE996\uEd01",
-	"entity.minecraft.chest_minecart":	"§f\uE999\uE999\uE998\uEd02",
-	"container.barrel":                 "§f\uE999\uEd03",
-	"container.enderchest":				"§f\uE999\uE996\uEd04",
-	"container.chestDouble":			"§f\uE999\uE999\uE996\uEd05",
+	"container.chest":					"§f\uE999\uE996\uEc01\uE992\uE992\uE994\uE994\uE994\uE998\uE998\uE998\uEd01",
+	"entity.minecraft.chest_minecart":	"§f\uE999\uE999\uE998\uEc02\uE992\uE992\uE994\uE994\uE994\uEd01",
+	"container.barrel":                 "§f\uE999\uEc03\uE992\uE992\uE994\uE994\uE999\uE995\uEd01",
+	"container.enderchest":				"§f\uE999\uE996\uEc04\uE992\uE992\uE994\uE994\uE994\uE998\uE998\uE998\uEd02",
+	"container.chestDouble":			"§f\uE999\uE999\uE996\uEc05\uE992\uE992\uE994\uE994\uE994\uE999\uE998\uE998\uE998\uEd03",
+
+	
+	"entity.minecraft.oak_chest_boat": "§f\uE999\uE999\uE999\uE999\uE999\uE996\uE995\uEB01\uE992\uE992\uE994\uE994\uE994\uE994\uE994\uE998\uE998\uEd01",
+	"entity.minecraft.spruce_chest_boat": "§f\uE999\uE999\uE999\uE999\uE999\uE996\uE995\uEB02\uE992\uE992\uE994\uE994\uE994\uE994\uE994\uE998\uE998\uEd01",
+	"entity.minecraft.birch_chest_boat": "§f\uE999\uE999\uE999\uE999\uE999\uE996\uE995\uEB03\uE992\uE992\uE994\uE994\uE994\uE994\uE994\uE998\uE998\uEd01",
+	"entity.minecraft.dark_oak_chest_boat": "§f\uE999\uE999\uE999\uE999\uE999\uE996\uE995\uEB04\uE992\uE992\uE994\uE994\uE994\uE994\uE994\uE998\uE998\uEd01",
+	"entity.minecraft.acacia_chest_boat": "§f\uE999\uE999\uE999\uE999\uE999\uE996\uE995\uEB05\uE992\uE992\uE994\uE994\uE994\uE994\uE994\uE998\uE998\uEd01",
+	"entity.minecraft.jungle_chest_boat": "§f\uE999\uE999\uE999\uE999\uE999\uE996\uE995\uEB06\uE992\uE992\uE994\uE994\uE994\uE994\uE994\uE998\uE998\uEd01",
+	"entity.minecraft.mangrove_chest_boat": "§f\uE999\uE999\uE999\uE999\uE999\uE996\uE995\uEB07\uE992\uE992\uE994\uE994\uE994\uE994\uE994\uE998\uE998\uEd01",
+	"entity.minecraft.cherry_chest_boat": "§f\uE999\uE999\uE999\uE999\uE999\uE996\uE995\uEB08\uE992\uE992\uE994\uE994\uE994\uE994\uE994\uE998\uE998\uEd01",
+	"entity.minecraft.bamboo_chest_raft": "§f\uE999\uE999\uE999\uE999\uE999\uE996\uE995\uEB09\uE992\uE992\uE994\uE994\uE994\uE994\uE994\uE998\uE998\uEd01",
+	"entity.minecraft.pale_oak_chest_boat": "§f\uE999\uE999\uE999\uE999\uE999\uE996\uE995\uEB10\uE992\uE992\uE994\uE994\uE994\uE994\uE994\uE998\uE998\uEd01",
 	
 	"options.languageAccuracyWarning": "§c* Modded languages require polytone and optigui to work",
 	"options.languageWarning": "§c* Modded languages require polytone and optigui to work"

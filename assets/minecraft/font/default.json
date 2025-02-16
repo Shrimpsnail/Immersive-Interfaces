@@ -42,11 +42,46 @@
             "\uE993": 16
         }
     },
+    {
+        "type": "space",
+        "advances": {
+            "\uE992": -64
+        }
+    },
+
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/slots/container.png",
+        "height": 52, "ascent": -5,
+        "chars": ["\uED01"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/slots/dark_container.png",
+        "height": 52, "ascent": -5,
+        "chars": ["\uED02"]
+    },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/slots/double_container.png",
+        "height": 106, "ascent": -5,
+        "chars": ["\uED03"]
+    },
+
+
+
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/inventory.png",
+        "height": 104, "ascent": -25,
+        "chars": ["\uEC00"]
+    },
 
 
 
 
 
+    
 	{ 
         "type": "bitmap",
         "file": "minecraft:gui/sprites/interfaces/chests/chest.png",
@@ -56,13 +91,13 @@
     { 
         "type": "bitmap",
         "file": "minecraft:gui/sprites/interfaces/chests/chest_minecart.png",
-        "height": 105, "ascent": 23,
+        "height": 106, "ascent": 23,
         "chars": ["\uEC02"]
     },
     { 
         "type": "bitmap",
         "file": "minecraft:gui/sprites/interfaces/chests/barrel.png",
-        "height": 83, "ascent": 14,
+        "height": 85, "ascent": 14,
         "chars": ["\uEC03"]
     },
     { 
@@ -74,44 +109,9 @@
     { 
         "type": "bitmap",
         "file": "minecraft:gui/sprites/interfaces/chests/large_chest.png",
-        "height": 158, "ascent": 34,
+        "height": 159, "ascent": 34,
         "chars": ["\uEC05"]
     },
-
-
-
-
-    { 
-        "type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/chests_slots/chest.png",
-        "height": 91, "ascent": 23,
-        "chars": ["\uED01"]
-    },
-    { 
-        "type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/chests_slots/chest_minecart.png",
-        "height": 105, "ascent": 23,
-        "chars": ["\uED02"]
-    },
-    { 
-        "type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/chests_slots/barrel.png",
-        "height": 83, "ascent": 14,
-        "chars": ["\uED03"]
-    },
-    { 
-        "type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/chests_slots/ender_chest.png",
-        "height": 91, "ascent": 23,
-        "chars": ["\uED04"]
-    },
-    { 
-        "type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/chests_slots/large_chest.png",
-        "height": 158, "ascent": 34,
-        "chars": ["\uED05"]
-    },
-
 
     { 
         "type": "bitmap",
@@ -182,7 +182,7 @@
     { 
         "type": "bitmap",
         "file": "minecraft:gui/sprites/interfaces/hopper_minecart.png",
-        "height": 68, "ascent": 14,
+        "height": 71, "ascent": 14,
         "chars": ["\uEC10"]
     },
     { 
@@ -304,21 +304,6 @@
         "file": "minecraft:gui/sprites/interfaces/villagers/libr_counter.png",
         "height": 167, "ascent": 14,
         "chars": ["\uEe04"]
-    },
-    
-    
-    
-    { 
-        "type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/big.png",
-        "height": 167, "ascent": 0,
-        "chars": ["\uEc99"]
-    },
-    { 
-        "type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/big.png",
-        "height": 167, "ascent": -163,
-        "chars": ["\uEc98"]
     }
     ]
 }

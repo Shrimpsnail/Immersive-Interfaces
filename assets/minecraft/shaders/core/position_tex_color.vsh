@@ -16,17 +16,7 @@ out vec4 vertexColor;
 vec2[] corners = vec2[](vec2(0, 0), vec2(0, 1), vec2(1, 1), vec2(1, 0));
 
 int offset = 0;
-float lastpos = 0;
-float firstpos = 0;
 bool hotbar = false;
-
-
-//edges
-
-float hotbar_l[4] = float[4](869.0,  389.0, 229.0,149.0);
-float hotbar_r[4] = float[4](1051.0, 571.0, 411.0,331.0);
-
-float inventory[4] = float[4](949.0,469.0,309.0,229.0);
 
 
 void main() {
@@ -37,29 +27,74 @@ void main() {
 
     gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
 
+    
+
     if (ivec4(round(color*255)) == ivec4(1,1,1,2)) {
 
         vec2 corner = corners[gl_VertexID % 4];
-        texCoord0 = corner;
+        texCoord0.x = corner.x/2;
+        texCoord0.y = corner.y/2;
 
 
-        pos.x = (corner.x-0.5) * 512;
-        pos.y = (corner.y-0.5) * 512;
+        pos.x = (corner.x-0.5) * 512/2;
+        pos.y = (corner.y-0.5) * 512/2;
 
-        if     ((gl_VertexID % 4 == 0 || gl_VertexID % 4 == 1) && Position.x == inventory[int(uiScale)-1]) pos.x += 77;
-        else if((gl_VertexID % 4 == 2 || gl_VertexID % 4 == 3) && Position.x == inventory[int(uiScale)-1]+176) pos.x += 77;
-
-        
+        if     ((gl_VertexID % 4 == 0 || gl_VertexID % 4 == 1) && Position.x == (ScreenSize.x/uiScale-176)/2 +77 ) pos.x += 77;
+        else if((gl_VertexID % 4 == 2 || gl_VertexID % 4 == 3) && Position.x == (ScreenSize.x/uiScale-176)/2 +253) pos.x += 77;
 
         gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
         gl_Position.xy += vec2(1,-1);
     }
-    
+
+    if (ivec4(round(color*255)) == ivec4(1,1,1,3)) {// ========= BREWING STAND
+
+        vec2 corner = corners[gl_VertexID % 4];
+        texCoord0.x = corner.x*0.6875;
+        texCoord0.y = corner.y*0.6875;
+
+
+        pos.x = (corner.x-0.5) * 352 -40;
+        pos.y = (corner.y-0.5) * 352 +48;
+
+        gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
+        gl_Position.xy += vec2(1,-1);
+    }
+    if (ivec4(round(color*255)) == ivec4(1,1,1,4)) {// ========= CHESTS
+
+        if(((gl_VertexID % 4 == 0 || gl_VertexID % 4 == 3)&&  Position.y == (ScreenSize.y/uiScale-222)/2 )||((gl_VertexID % 4 == 1 || gl_VertexID % 4 == 2)&&  Position.y == (ScreenSize.y/uiScale-222)/2 +125)){
+            pos.xy = vec2(0,0);
+        }else{
+
+        vec2 corner = corners[gl_VertexID % 4];
+        texCoord0.x = corner.x/2;
+        texCoord0.y = corner.y/2;
+
+        pos.x = (corner.x-0.5) * 512/2;
+        pos.y = (corner.y-0.5) * 512/2;
+
+        if ((gl_VertexID % 4 == 0 || gl_VertexID % 4 == 3) && Position.y == (ScreenSize.y/uiScale/2)+14) {
+
+            texCoord0.y += 0.5;
+            pos.y += 27;
+
+        }
+        if ((gl_VertexID % 4 == 1 || gl_VertexID % 4 == 2) && Position.y ==(ScreenSize.y/uiScale/2)+110){
+
+            texCoord0.y += 0.5;
+            pos.y += 27;
+        }
+
+
+        }
+
+        gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
+        gl_Position.xy += vec2(1,-1);
+    }
+
     if(pos.z == 310){
 
-        if(( gl_VertexID % 4 == 1 || gl_VertexID % 4 == 0 ) && pos.x == hotbar_l[int(uiScale)-1]) hotbar = true;
-        
-        if(( gl_VertexID % 4 == 2 || gl_VertexID % 4 == 3 ) && pos.x == hotbar_r[int(uiScale)-1]) hotbar = true;
+        if(( gl_VertexID % 4 == 0 || gl_VertexID % 4 == 1 ) && pos.x == (ScreenSize.x/uiScale-182)/2 ) hotbar = true;
+        if(( gl_VertexID % 4 == 2 || gl_VertexID % 4 == 3 ) && pos.x == (ScreenSize.x/uiScale-182)/2 + 182) hotbar = true;
         
     }
 
@@ -73,6 +108,20 @@ void main() {
         gl_Position = ProjMat * ModelViewMat * vec4(pos.x*2,pos.y*2,pos.z, 1.0);
 
     }
+
+
+
+    /*if((gl_VertexID % 4 == 0 && pos.y == 87 && pos.x == 284) //===================== VIllager frown
+    
+    || (gl_VertexID % 4 == 1 && pos.y == 108 && pos.x == 284)
+    || (gl_VertexID % 4 == 2 && pos.y == 108 && pos.x == 312)
+    || (gl_VertexID % 4 == 3 && pos.y == 87 && pos.x == 312) ){
+        
+        pos.y -= 30;
+        pos.x -= 8;
+        gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
+    }*/
+
 
     vertexColor = Color;
     
