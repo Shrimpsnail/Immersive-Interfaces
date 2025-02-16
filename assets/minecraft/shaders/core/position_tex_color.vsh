@@ -23,7 +23,20 @@ void main() {
     texCoord0 = UV0;
     vec3 pos = Position;
     vec4 color = texture(Sampler0, vec2(0));
+    vec4 drawnColor;
     float uiScale = ScreenSize.x * ProjMat[0][0] * 0.5;
+
+    if(gl_VertexID % 4 == 0){
+        drawnColor = texture(Sampler0, texCoord0);
+    }else if(gl_VertexID % 4 == 1){
+        drawnColor = texture(Sampler0, vec2(texCoord0.x,texCoord0.y-0.001));
+    }else if(gl_VertexID % 4 == 2){
+        drawnColor = texture(Sampler0, texCoord0- 0.001);
+    }else{
+        drawnColor = texture(Sampler0, vec2(texCoord0.x-0.001,texCoord0.y));
+
+
+    }
 
     gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
 
@@ -91,7 +104,34 @@ void main() {
         gl_Position.xy += vec2(1,-1);
     }
 
-    if(pos.z == 310){
+     if (ivec4(round(color*255)) == ivec4(1,1,1,5)) {// ========= VILLAGER
+
+        vec2 corner = corners[gl_VertexID % 4];
+        texCoord0.x = corner.x*0.6875;
+        texCoord0.y = corner.y*0.6875;
+
+
+        pos.x = (corner.x-0.5) * 352 +1;
+        pos.y = (corner.y-0.5) * 352 +48;
+
+        gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
+        gl_Position.xy += vec2(1,-1);
+    }
+
+    // ========= VILLAGER EXPERIENCE
+    if (
+        ((gl_VertexID % 4 == 0 || gl_VertexID % 4 == 3) && pos.y == (ScreenSize.y/uiScale/2-67)) ||
+        ((gl_VertexID % 4 == 1 || gl_VertexID % 4 == 2) && pos.y == (ScreenSize.y/uiScale/2-67)+5) 
+       ) {
+
+        if (pos.x >= (ScreenSize.x/uiScale/2-2)-1 && pos.x <= (ScreenSize.x/uiScale/2-2) +102 && round(drawnColor.w*255) == 254)
+        {
+            pos.y -= 30;
+            gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
+        }
+    }
+
+    /*if(pos.z == 310){// ======================= HOTBAR
 
         if(( gl_VertexID % 4 == 0 || gl_VertexID % 4 == 1 ) && pos.x == (ScreenSize.x/uiScale-182)/2 ) hotbar = true;
         if(( gl_VertexID % 4 == 2 || gl_VertexID % 4 == 3 ) && pos.x == (ScreenSize.x/uiScale-182)/2 + 182) hotbar = true;
@@ -107,9 +147,9 @@ void main() {
 
         gl_Position = ProjMat * ModelViewMat * vec4(pos.x*2,pos.y*2,pos.z, 1.0);
 
-    }
+    }*/
 
-
+   
 
     /*if((gl_VertexID % 4 == 0 && pos.y == 87 && pos.x == 284) //===================== VIllager frown
     
@@ -121,7 +161,6 @@ void main() {
         pos.x -= 8;
         gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
     }*/
-
 
     vertexColor = Color;
     

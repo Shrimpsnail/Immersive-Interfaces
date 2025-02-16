@@ -252,25 +252,6 @@
         "chars": ["\uEc21"]
     },
 
-    { 
-        "type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/beacon_left.png",
-        "height": 152, "ascent": -50,
-        "chars": ["\uEc22"]
-    },
-    { 
-        "type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/beacon_noggin.png",
-        "height": 24, "ascent": 0,
-        "chars": ["\uEc23"]
-    },
-    { 
-        "type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/beacon_right.png",
-        "height": 152, "ascent": 27,
-        "chars": ["\uEc24"]
-    },
-
 
 
 
