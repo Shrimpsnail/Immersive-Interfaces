@@ -2,7 +2,7 @@
 	"pack": {
 		"pack_format": 15,
 		"supported_formats": [15,100],
-		"description": "§7Completely overhauled UI\n§9GitHub §8 | By Shrimpsnail"
+		"description": "§7Complete GUI overhaul\n§9GitHub §8| By Shrimpsnail"
 	},
 	"language":{
 
@@ -24,6 +24,10 @@
 			{
 				"directory": "_1.21.4_sloticons",
 				"formats": [43,100]
+			},
+			{
+				"directory": "_1.21_shaders",
+				"formats": [18,100]
 			}
 		]
   	}
