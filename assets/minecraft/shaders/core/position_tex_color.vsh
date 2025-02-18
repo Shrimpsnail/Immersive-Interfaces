@@ -19,7 +19,6 @@ int offset = 0;
 bool hotbar = false;
 
 
-
 void main() {
     texCoord0 = UV0;
     vec3 pos = Position;
@@ -53,8 +52,8 @@ void main() {
         pos.x = (corner.x-0.5) * 512/2;
         pos.y = (corner.y-0.5) * 512/2;
 
-        if     ((gl_VertexID % 4 == 0 || gl_VertexID % 4 == 1) && Position.x == round((ScreenSize.x/uiScale-176)/2) +77 ) pos.x += 77;
-        else if((gl_VertexID % 4 == 2 || gl_VertexID % 4 == 3) && Position.x == round((ScreenSize.x/uiScale-176)/2) +253) pos.x += 77;
+        if     ((gl_VertexID % 4 == 0 || gl_VertexID % 4 == 1) && Position.x == (ScreenSize.x/uiScale-176)/2 +77 ) pos.x += 77;
+        else if((gl_VertexID % 4 == 2 || gl_VertexID % 4 == 3) && Position.x == (ScreenSize.x/uiScale-176)/2 +253) pos.x += 77;
 
         gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
         gl_Position.xy += vec2(1,-1);
@@ -75,7 +74,7 @@ void main() {
     }
     if (ivec4(round(color*255)) == ivec4(1,1,1,4)) {// ========= CHESTS
 
-        if(((gl_VertexID % 4 == 0 || gl_VertexID % 4 == 3)&&  Position.y == round((ScreenSize.y/uiScale-222)/2) )||((gl_VertexID % 4 == 1 || gl_VertexID % 4 == 2)&&  Position.y == round((ScreenSize.y/uiScale-222)/2 +125))){
+        if(((gl_VertexID % 4 == 0 || gl_VertexID % 4 == 3)&&  Position.y == (ScreenSize.y/uiScale-222)/2 )||((gl_VertexID % 4 == 1 || gl_VertexID % 4 == 2)&&  Position.y == (ScreenSize.y/uiScale-222)/2 +125)){
             pos.xy = vec2(0,0);
         }else{
 
@@ -86,13 +85,13 @@ void main() {
         pos.x = (corner.x-0.5) * 512/2;
         pos.y = (corner.y-0.5) * 512/2;
 
-        if ((gl_VertexID % 4 == 0 || gl_VertexID % 4 == 3) && Position.y == round(ScreenSize.y/uiScale/2)+14) {
+        if ((gl_VertexID % 4 == 0 || gl_VertexID % 4 == 3) && Position.y == (ScreenSize.y/uiScale/2)+14) {
 
             texCoord0.y += 0.5;
             pos.y += 27;
 
         }
-        if ((gl_VertexID % 4 == 1 || gl_VertexID % 4 == 2) && Position.y == round(ScreenSize.y/uiScale/2)+110){
+        if ((gl_VertexID % 4 == 1 || gl_VertexID % 4 == 2) && Position.y ==(ScreenSize.y/uiScale/2)+110){
 
             texCoord0.y += 0.5;
             pos.y += 27;
@@ -121,11 +120,11 @@ void main() {
 
     // ========= VILLAGER EXPERIENCE
     if (
-        ((gl_VertexID % 4 == 0 || gl_VertexID % 4 == 3) && pos.y == (round(ScreenSize.y/uiScale/2)-67)  ) ||
-        ((gl_VertexID % 4 == 1 || gl_VertexID % 4 == 2) && pos.y == (round(ScreenSize.y/uiScale/2)-67)+5) 
+        ((gl_VertexID % 4 == 0 || gl_VertexID % 4 == 3) && pos.y == (ScreenSize.y/uiScale/2-67)) ||
+        ((gl_VertexID % 4 == 1 || gl_VertexID % 4 == 2) && pos.y == (ScreenSize.y/uiScale/2-67)+5) 
        ) {
 
-        if (pos.x >=  round((ScreenSize.x/uiScale/2-2))-1 && pos.x <= round((ScreenSize.x/uiScale/2-2)) +102 && round(drawnColor.w*255) == 254)
+        if (pos.x >= (ScreenSize.x/uiScale/2-2)-1 && pos.x <= (ScreenSize.x/uiScale/2-2) +102 && round(drawnColor.w*255) == 254)
         {
             pos.y -= 30;
             gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
