@@ -9,8 +9,8 @@
       "y": -94,  
       "z": -500,  
       "width": 190,  
-      "height": 105,  
-      "texture": "textures/interfaces/chests/chest_minecart.png"
+      "height": 106,  
+      "texture": "textures/polytone_interfaces/chests/chest_minecart.png"
     }  
   ]  
 }

@@ -6,10 +6,10 @@
   "sprites": [  
     {  
       "x": -88,  
-      "y": -83,  
+      "y": -85,  
       "z": -500,  
       "width": 176,  
-      "height": 83,  
+      "height": 85,  
       "texture": "minecraft:interfaces/chests/barrel"
     }  
   ]  

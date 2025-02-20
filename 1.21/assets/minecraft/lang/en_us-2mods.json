@@ -77,8 +77,9 @@
 
     "entity.minecraft.wandering_trader": "Wandering Trader",
 
+	"merchant.trades": "§f\uE996\uE995\uE995\uE995\uEe00",
+
     "merchant.deprecated": "Villagers restock up to two times per day.",
-	"merchant.trades": "",
     "merchant.level.1": "Novice",
     "merchant.level.2": "Apprentice",
     "merchant.level.3": "Journeyman",

@@ -46,7 +46,7 @@ void main() {
 
     
 
-    if (ivec4(round(color*255)) == ivec4(1,1,1,2)) {
+    if (ivec4(round(color*255)) == ivec4(1,1,1,2) || ivec4(round(color*255)) == ivec4(1,2,1,2)) {
 
         vec2 corner = corners[gl_VertexID % 4];
         texCoord0.x = corner.x/2;

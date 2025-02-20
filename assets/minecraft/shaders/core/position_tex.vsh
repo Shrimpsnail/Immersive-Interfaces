@@ -14,9 +14,9 @@ out vec2 texCoord0;
 
 vec2[] corners = vec2[](vec2(0, 0), vec2(0, 1), vec2(1, 1), vec2(1, 0));
 
-int offset = 0;
 bool hotbar = false;
 
+vec2 normalRatio = vec2(0.6875,0.6484375);
 
 
 void main() {
@@ -24,6 +24,7 @@ void main() {
     vec3 pos = Position;
     vec4 color = texture(Sampler0, vec2(0));
     vec4 drawnColor;
+    vec4 cornerColor;
     float uiScale = ScreenSize.x * ProjMat[0][0] * 0.5;
 
     if(gl_VertexID % 4 == 0){
@@ -36,11 +37,22 @@ void main() {
         drawnColor = texture(Sampler0, vec2(texCoord0.x-0.001,texCoord0.y));
     }
 
+    if(gl_VertexID % 4 == 0){
+        cornerColor = texture(Sampler0, texCoord0);
+    }else if(gl_VertexID % 4 == 1){
+        cornerColor = texture(Sampler0, vec2(texCoord0.x,texCoord0.y-normalRatio.y));
+    }else if(gl_VertexID % 4 == 2){
+        cornerColor = texture(Sampler0, texCoord0-normalRatio);
+    }else{
+        cornerColor = texture(Sampler0, vec2(texCoord0.x-normalRatio.x,texCoord0.y));
+    }
+
     gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
 
     
+    //cornerColor = texture(Sampler0, vec2(texCoord0.x,texCoord0.y));
 
-    if (ivec4(round(color*255)) == ivec4(1,1,1,2) &&  round(drawnColor.w*255) != 253) {
+    if (ivec4(round(cornerColor*255)) == ivec4(1,1,1,2) || ivec4(round(color*255)) == ivec4(1,2,1,2)) {
 
         vec2 corner = corners[gl_VertexID % 4];
         texCoord0.x = corner.x/2;
@@ -57,7 +69,7 @@ void main() {
         gl_Position.xy += vec2(1,-1);
     }
 
-    if (ivec4(round(color*255)) == ivec4(1,1,1,3)) {// ========= BREWING STAND
+    if (ivec4(round(cornerColor*255)) == ivec4(1,1,1,3)) {// ========= BREWING STAND
 
         vec2 corner = corners[gl_VertexID % 4];
         texCoord0.x = corner.x*0.6875;

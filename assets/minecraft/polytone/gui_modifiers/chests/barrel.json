@@ -5,12 +5,12 @@
   "label_y_offset": -2000,
   "sprites": [  
     {  
-      "x": -87,  
+      "x": -88,  
       "y": -85,  
       "z": -500,  
       "width": 176,  
-      "height": 83,  
-      "texture": "textures/interfaces/chests/barrel.png"
+      "height": 85,  
+      "texture": "textures/polytone_interfaces/chests/barrel.png"
     }  
   ]  
 }

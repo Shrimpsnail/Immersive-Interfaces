@@ -6,10 +6,10 @@
   "sprites": [  
     {  
       "x": -100,  
-      "y": -66,  
+      "y": -68,  
       "z": -500,  
       "width": 200,  
-      "height": 68,  
+      "height": 71,  
       "texture": "minecraft:interfaces/hopper_minecart"
     }  
   ]  

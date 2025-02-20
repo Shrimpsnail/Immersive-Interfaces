@@ -10,7 +10,7 @@
       "z": -500,  
       "width": 184,  
       "height": 91,  
-      "texture": "textures/interfaces/chests/chest.png"
+      "texture": "textures/polytone_interfaces/chests/chest.png"
     }  
   ]  
 }
