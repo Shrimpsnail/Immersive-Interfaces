@@ -10,7 +10,7 @@
       "z": -500,  
       "width": 78,  
       "height": 112,  
-      "texture": "textures/interfaces/dispenser_block.png"
+      "texture": "textures/polytone_interfaces/dispenser_block.png"
     }  
   ]  
 }

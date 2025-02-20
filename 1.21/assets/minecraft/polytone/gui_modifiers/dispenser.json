@@ -1,6 +1,6 @@
 {  
   "target_type": "screen_title",  
-  "target": "container.dropper",  
+  "target": "container.dispenser",  
   "title_y_offset": -2000,
   "label_y_offset": -2000,
   "sprites": [  
@@ -10,7 +10,7 @@
       "z": -500,  
       "width": 78,  
       "height": 112,  
-      "texture": "textures/polytone_interfaces/dropper_block.png"
+      "texture": "minecraft:interfaces/dispenser_block"
     }  
   ]  
 }

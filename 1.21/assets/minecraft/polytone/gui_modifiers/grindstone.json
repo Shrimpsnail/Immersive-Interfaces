@@ -1,6 +1,6 @@
 {  
   "target_type": "menu_id",  
-  "target": "enchantment",  
+  "target": "grindstone",  
   "title_y_offset": -2000,
   "label_y_offset": -2000
 }

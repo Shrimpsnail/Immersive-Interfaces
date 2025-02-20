@@ -6,11 +6,11 @@
   "sprites": [  
     {  
       "x": -100,  
-      "y": -68,  
+      "y": -66,  
       "z": -500,  
       "width": 200,  
       "height": 68,  
-      "texture": "polytone_interfaces/hopper_minecart.png"
+      "texture": "minecraft:interfaces/hopper_minecart"
     }  
   ]  
 }

@@ -1,6 +1,5 @@
 {  
   "target_type": "menu_id",  
-  "target": "enchantment",  
-  "title_y_offset": -2000,
+  "target": "shulker_box",
   "label_y_offset": -2000
 }
