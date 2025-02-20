@@ -1,5 +1,8 @@
 #version 150
 
+
+#moj_import <minecraft:interfaces.glsl>
+
 in vec3 Position;
 in vec2 UV0;
 in vec4 Color;
@@ -17,7 +20,7 @@ vec2[] corners = vec2[](vec2(0, 0), vec2(0, 1), vec2(1, 1), vec2(1, 0));
 
 int offset = 0;
 bool hotbar = false;
-
+float margin = 0;
 
 
 void main() {

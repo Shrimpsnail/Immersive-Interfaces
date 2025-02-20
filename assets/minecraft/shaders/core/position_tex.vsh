@@ -34,15 +34,13 @@ void main() {
         drawnColor = texture(Sampler0, texCoord0- 0.001);
     }else{
         drawnColor = texture(Sampler0, vec2(texCoord0.x-0.001,texCoord0.y));
-
-
     }
 
     gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
 
     
 
-    if (ivec4(round(color*255)) == ivec4(1,1,1,2)) {
+    if (ivec4(round(color*255)) == ivec4(1,1,1,2) &&  round(drawnColor.w*255) != 253) {
 
         vec2 corner = corners[gl_VertexID % 4];
         texCoord0.x = corner.x/2;
