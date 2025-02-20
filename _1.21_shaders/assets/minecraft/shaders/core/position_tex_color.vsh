@@ -20,7 +20,7 @@ vec2[] corners = vec2[](vec2(0, 0), vec2(0, 1), vec2(1, 1), vec2(1, 0));
 
 int offset = 0;
 bool hotbar = false;
-float margin = 0;
+float margin = 1;
 
 
 void main() {
@@ -56,8 +56,8 @@ void main() {
         pos.x = (corner.x-0.5) * 512/2;
         pos.y = (corner.y-0.5) * 512/2;
 
-        if     ((gl_VertexID % 4 == 0 || gl_VertexID % 4 == 1) && Position.x == round((ScreenSize.x/uiScale-176)/2) +77 ) pos.x += 77;
-        else if((gl_VertexID % 4 == 2 || gl_VertexID % 4 == 3) && Position.x == round((ScreenSize.x/uiScale-176)/2) +253) pos.x += 77;
+        if     ((gl_VertexID % 4 == 0 || gl_VertexID % 4 == 1) && vertex_compare(Position.x,ScreenSize.x,uiScale,-176,77,margin)) pos.x += 77;
+        else if((gl_VertexID % 4 == 2 || gl_VertexID % 4 == 3) && vertex_compare(Position.x,ScreenSize.x,uiScale,-176,253,margin)) pos.x += 77;
 
         gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
         gl_Position.xy += vec2(1,-1);
