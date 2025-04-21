@@ -251,6 +251,12 @@
         "height": 32, "ascent": 27,
         "chars": ["\uEc21"]
     },
+    { 
+        "type": "bitmap",
+        "file": "minecraft:gui/sprites/interfaces/beacon_glow.png",
+        "height": 183, "ascent": 42,
+        "chars": ["\uEc22"]
+    },
 
 
 

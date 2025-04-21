@@ -19,10 +19,11 @@
 	"container.loom": 				"§f\uE999\uE999\uE999\uE995\uE998\uE998\uEc16",
 	"container.hopper":				"",
 	"container.grindstone_title":	"",
+	"container.stonecutter":		"",
 	"container.cartography_table":	"§f\uE997\uE997\uE997\uE997\uE997\uE995\uEc21",
 	"container.enchant":			"§f\uE999\uE999\uE999\uE999\uE999\uE995\uE995\uEc11",
-	"container.dispenser":	"§f\uE998\uEc19",
-	"container.dropper":	"§f\uE998\uEc20",
+	"container.dispenser":			"§f\uE998\uEc19",
+	"container.dropper":			"§f\uE998\uEc20",
 	
 	"block.minecraft.beacon.primary": "",
 	"block.minecraft.beacon.secondary": "",
