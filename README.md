@@ -1,7 +1,9 @@
 ## Welcome to the Immersive Interfaces resource pack repository!
 
-The Resource pack is available publickly in the websites below and only these are official, this repository is for managing and incase anyone wishes to test features. 
+The Resource pack is available publicly in the websites below and only these are official, this repository is for managing and incase anyone wishes to test features. 
 If you wish to give it a test run feel free to download it and give your feedback!
+
+**THERE ARE NO BEDROCK VERSIONS**
 
 ### Official downloads
 

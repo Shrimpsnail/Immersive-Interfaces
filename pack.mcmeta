@@ -22,10 +22,6 @@
 				"formats": [18,100]
       		},
 			{
-				"directory": "_1.21.4_sloticons",
-				"formats": [43,100]
-			},
-			{
 				"directory": "_1.21_shaders",
 				"formats": [42,100]
 			}

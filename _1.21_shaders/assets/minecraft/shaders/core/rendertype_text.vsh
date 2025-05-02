@@ -13,7 +13,7 @@ uniform sampler2D Sampler0;
 uniform mat4 ModelViewMat;
 uniform mat4 ProjMat;
 uniform int FogShape;
-uniform vec2 ScreenSize;
+//uniform vec2 ScreenSize;
 
 out float vertexDistance;
 out vec4 vertexColor;
@@ -23,12 +23,7 @@ out vec2 texCoord0;
 vec2[] corners = vec2[](vec2(0, 0), vec2(0, 1), vec2(1, 1), vec2(1, 0));
 
 float margin = 0;
-
-bool vertex_compare(float position,float ScreenSize,float uiScale,float offset,float size,float margin) 
-{
-    return ( abs( (round(ScreenSize/uiScale/2)+offset+size) - position )<= margin );
-}
-
+vec2 screen = 2 / vec2(ProjMat[0][0], -ProjMat[1][1]);
 
 void main() {
     
@@ -40,9 +35,10 @@ void main() {
     vec4 color = round(texture(Sampler0, UV0-(0.001*corner))*255);
 
 
-    float uiScale = ScreenSize.x * ProjMat[0][0] * 0.5;
-    vec2 screen = ScreenSize/uiScale;
+    //float uiScale = ScreenSize.x * ProjMat[0][0] * 0.5;
+    //vec2 screen = ScreenSize/uiScale;
 
+    ivec2 halfScreen = ivec2(0.49+(screen/2));
 
     
     if(color.a == 1){
@@ -50,26 +46,20 @@ void main() {
 
 
         //                        Chests        double    barrel      minecart                    
-        vec2[] sizes   = vec2[]( vec2(0,0) , vec2(0,0) , vec2(0,0) , vec2(0,0) );
-        vec2[] offsets = vec2[]( vec2(0,0) , vec2(0,0) , vec2(0,0) , vec2(0,0) );
+        //vec2[] positions   = vec2[]( vec2(0,0) , vec2(0,0) , vec2(0,0) , vec2(0,0) );
+        int size[] = {0,184,200,190,176,250,78,200};
 
-
-
-
-
-
+        if(color.r != 0) pos.x = halfScreen.x+size[int(color.r)]*(corner.x-0.5);
+        
 
         if(color.b == 1){
 
-            pos.z += 300;
+            pos.z += 200;
         }
 
     }
 
     if(color.a == 1 && round(255*Color.rgb) != vec3(64.0)) pos = vec3(0,0,0); // Remove if not in UI
-    
-
-
     
     vertexColor = textColor * texelFetch(Sampler2, UV2 / 16, 0);
     gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);

@@ -1,8 +1,5 @@
 #version 150
 
-
-//#moj_import <minecraft:interfaces.glsl>
-
 in vec3 Position;
 in vec2 UV0;
 in vec4 Color;
@@ -11,30 +8,33 @@ uniform sampler2D Sampler0;
 
 uniform mat4 ModelViewMat;
 uniform mat4 ProjMat;
-uniform vec2 ScreenSize;
-uniform float GameTime;
+//uniform vec2 ScreenSize;
+//uniform float GameTime;
 
 out vec2 texCoord0;
 out vec4 vertexColor;// 1.21
 
-vec2[] corners = vec2[](vec2(0, 0), vec2(0, 1), vec2(1, 1), vec2(1, 0));
+//float uiScale = ScreenSize.x * ProjMat[0][0] * 0.5;
+//vec2 screen = ScreenSize/uiScale;
 
-bool hotbar = false;
+
+vec2[] corners = vec2[](vec2(0, 0), vec2(0, 1), vec2(1, 1), vec2(1, 0));
+vec2 screen = 2 / vec2(ProjMat[0][0], -ProjMat[1][1]);
 float margin = 1;
 
-bool vertex_compare(float position,float ScreenSize,float uiScale,float offset,float size,float margin) 
-{
-    return ( abs( (round(ScreenSize/uiScale/2)+offset+size) - position )<= margin );
+bool posCheckX(float offset,float size) {
+    return ( abs( (round(screen.x/2)+offset+(size*corners[gl_VertexID % 4].x)) - Position.x )<= margin );
 }
-
-bool positionCheck(vec2 position,vec2 ScreenSize,float uiScale,int vertID ,vec2 offset,vec2 size,float margin)// full check 
-{
-        if(vertID == 0) return greaterThan( abs( (round(ScreenSize/uiScale/2)+offset               ) - position ),vec2(margin) );
-        if(vertID == 1) return greaterThan( abs( (round(ScreenSize/uiScale/2)+offset+vec2(0,size.y)) - position ),vec2(margin) );
-        if(vertID == 2) return greaterThan( abs( (round(ScreenSize/uiScale/2)+offset+size          ) - position ),vec2(margin) );
-        if(vertID == 3) return greaterThan( abs( (round(ScreenSize/uiScale/2)+offset+vec2(size.x,0)) - position ),vec2(margin) );
+bool posChecky(float offset,float size) {
+    return ( abs( (round(screen.y/2)+offset+(size*corners[gl_VertexID % 4].y)) - Position.y )<= margin );
 }
-
+bool posCheck(vec2 offset,vec2 size) {
+    return ( abs( (round(screen.x/2)+offset.x+(size.x*corners[gl_VertexID % 4].x)) - Position.x )<= margin )&&
+           ( abs( (round(screen.y/2)+offset.y+(size.y*corners[gl_VertexID % 4].y)) - Position.y )<= margin );
+}
+bool posCheck(vec2 offset,float size) {
+    return posCheck(offset,vec2(size));
+}
 
 void main() {
 
@@ -42,15 +42,13 @@ void main() {
     texCoord0 = UV0;
     vertexColor = Color; // 1.21
     //====================
-    
-    vec3 pos = Position;
 
+    vec3 pos = Position;
     int vertID = gl_VertexID % 4;
 
     vec2 corner = corners[vertID];
     vec4 color = round(texture(Sampler0, texCoord0-(0.00001*corner))*255);
 
-    float uiScale = ScreenSize.x * ProjMat[0][0] * 0.5;
     //ivec2 halfScreen = ivec2(0.49+(ScreenSize/uiScale/2));
 
     if(color.a == 1){ //Custom GUIS
@@ -92,29 +90,15 @@ void main() {
 
             texCoord0 = corner;
             texCoord0.x /= 6.0;
-
             
             int rows= 0;
 
-            if((vertID == 0 || vertID == 3) &&(vertex_compare(Position.y,ScreenSize.y,uiScale,-31,0 ,margin))) rows=0;
-            if((vertID == 1 || vertID == 2) &&(vertex_compare(Position.y,ScreenSize.y,uiScale,-31,96 ,margin))) rows=0;
-            
-            if((vertID == 0 || vertID == 3) &&(vertex_compare(Position.y,ScreenSize.y,uiScale,-22,0 ,margin))) rows=1;
-            if((vertID == 1 || vertID == 2) &&(vertex_compare(Position.y,ScreenSize.y,uiScale,-22,96 ,margin))) rows=1;
-
-            if((vertID == 0 || vertID == 3) &&(vertex_compare(Position.y,ScreenSize.y,uiScale,-13,0 ,margin))) rows=2;
-            if((vertID == 1 || vertID == 2) &&(vertex_compare(Position.y,ScreenSize.y,uiScale,-13,96 ,margin))) rows=2;
-
-            if((vertID == 0 || vertID == 3) &&(vertex_compare(Position.y,ScreenSize.y,uiScale, -4,0 ,margin))) rows=3;
-            if((vertID == 1 || vertID == 2) &&(vertex_compare(Position.y,ScreenSize.y,uiScale, -4,96 ,margin))) rows=3;
-
-            if((vertID == 0 || vertID == 3) &&(vertex_compare(Position.y,ScreenSize.y,uiScale, 5,0 ,margin))) rows=4;
-            if((vertID == 1 || vertID == 2) &&(vertex_compare(Position.y,ScreenSize.y,uiScale, 5,96 ,margin))) rows=4;
-
-            if((vertID == 0 || vertID == 3) &&(vertex_compare(Position.y,ScreenSize.y,uiScale,14,0 ,margin))) rows=5;
-            if((vertID == 1 || vertID == 2) &&(vertex_compare(Position.y,ScreenSize.y,uiScale,14,96 ,margin))) rows=5;
-
-            //rows= int((((Position.y-509)/uiScale)+(96*corner.y))/9.0);
+            if(posChecky(-31,96)) rows=0;
+            if(posChecky(-22,96)) rows=1;
+            if(posChecky(-13,96)) rows=2;
+            if(posChecky( -4,96)) rows=3;
+            if(posChecky(  5,96)) rows=4;
+            if(posChecky( 14,96)) rows=5;
 
             texCoord0.x += rows/6.0;
 
@@ -131,7 +115,7 @@ void main() {
                 case 1:pos.z +=  90;break;
                 case 2:pos.z +=  90;break;
                 case 3:pos.z += 280;break;
-            }
+            } 
             
         }
         if(color.r == 8){ //base 320 - Creative
@@ -162,9 +146,9 @@ void main() {
 
             texCoord0 = corner*(320.0/512.0)/2;
 
-                 if(mod((GameTime*24000),animation_speed) <   animation_speed/frames) texCoord0.x += 0;
-            else if(mod((GameTime*24000),animation_speed) < 2*animation_speed/frames) texCoord0.x += (320.0/512.0)/2;
-            else if(mod((GameTime*24000),animation_speed) <   animation_speed       ) texCoord0.y += (320.0/512.0)/2;
+                 if(mod((/*GameTime*24000*/ 1 ),animation_speed) <   animation_speed/frames) texCoord0.x += 0;
+            else if(mod((/*GameTime*24000*/ 1 ),animation_speed) < 2*animation_speed/frames) texCoord0.x += (320.0/512.0)/2;
+            else if(mod((/*GameTime*24000*/ 1 ),animation_speed) <   animation_speed       ) texCoord0.y += (320.0/512.0)/2;
         }
 
 
@@ -172,140 +156,40 @@ void main() {
 
     if(color.a == 2){ //Custom SPRITES
 
-        if(color.b == 1){
+        if(color.g == 1){ // BEACON 
 
-            if (vertID == 2 || vertID == 3)
-            {
-                texCoord0.x -= 18.0/256.0;
+            if(color.b == 1){// Beacon icons
+
+                texCoord0.x -= (18.0/256.0)*corner.x;
+
+                if((posCheckX(-60,18)) || (posCheckX(-48,18)) || (posCheckX(-36,18)) || (posCheckX( 31,18))) pos = vec3(0,0,0);
+                if (posCheckX(55,18)) texCoord0.x += 18.0/256.0;
             }
 
-            if((vertID == 0 || vertID == 1) && (vertex_compare(Position.x,ScreenSize.x,uiScale,-60,0 ,margin))) pos = vec3(0,0,0);
-            if((vertID == 2 || vertID == 3) && (vertex_compare(Position.x,ScreenSize.x,uiScale,-60,18,margin))) pos = vec3(0,0,0);
+            if(color.b == 2){ // Beacon buttons
 
-            if((vertID == 0 || vertID == 1) && (vertex_compare(Position.x,ScreenSize.x,uiScale,-48,0 ,margin))) pos = vec3(0,0,0);
-            if((vertID == 2 || vertID == 3) && (vertex_compare(Position.x,ScreenSize.x,uiScale,-48,18,margin))) pos = vec3(0,0,0);
+                pos.xy += ((corner-0.5)*2*3);
+                texCoord0 -= corner*(56.0/textureSize(Sampler0,0));      // speed (default)
 
-            if((vertID == 0 || vertID == 1) && (vertex_compare(Position.x,ScreenSize.x,uiScale,-36,0 ,margin))) pos = vec3(0,0,0);
-            if((vertID == 2 || vertID == 3) && (vertex_compare(Position.x,ScreenSize.x,uiScale,-36,18,margin))) pos = vec3(0,0,0);
-
-            if((vertID == 0 || vertID == 1) && (vertex_compare(Position.x,ScreenSize.x,uiScale,31,0 ,margin))) pos = vec3(0,0,0);
-            if((vertID == 2 || vertID == 3) && (vertex_compare(Position.x,ScreenSize.x,uiScale,31,18,margin))) pos = vec3(0,0,0);
-
-            if((vertID == 0 || vertID == 1) && (vertex_compare(Position.x,ScreenSize.x,uiScale,55,0 ,margin))) texCoord0.x += 18.0/256.0;
-            if((vertID == 2 || vertID == 3) && (vertex_compare(Position.x,ScreenSize.x,uiScale,55,18,margin))) texCoord0.x += 18.0/256.0;
-
+                if(posCheck(vec2(-38,-88),22)) texCoord0 += vec2(28, 0)/textureSize(Sampler0,0); // haste
+                if(posCheck(vec2(-62,-63),22)) texCoord0 += vec2( 0,28)/textureSize(Sampler0,0); // resistance
+                if(posCheck(vec2(-38,-63),22)) texCoord0 += vec2(28,28)/textureSize(Sampler0,0); // jump boost
+                if(posCheck(vec2(-50,-38),22)) texCoord0 += vec2( 0,56)/textureSize(Sampler0,0); // strength
+                if(posCheck(vec2( 29,-63),22)) texCoord0 += vec2(56, 0)/textureSize(Sampler0,0); // regen
+                if(posCheck(vec2( 49, -3),22)) texCoord0 += vec2(28,56)/textureSize(Sampler0,0); // tier 2
+                if(posCheck(vec2( 53,-63),22)) texCoord0 += vec2(56,28)/textureSize(Sampler0,0); // beacon on
+                if(posCheck(vec2( 75, -3),22)) pos.xy = vec2(0,0);                               // cross button
+            }
             pos.z += 400;
-
         }
 
-        if(color.b == 2){
+        if(color.g == 2){// VILLAGER
 
-            pos.z += 400;
-            pos.xy += ((corner-0.5)*2*3);
-            texCoord0 -= corner*(56.0/textureSize(Sampler0,0));
-
-            
-           //bool positionCheck(vec2 position,vec2 ScreenSize,float uiScale,int vertID ,vec2 offset,vec2 size,float margin)// full check 
-
-            /* if(positionCheck(Position,ScreenSize,uiScale,vertID,vec2(-38,-88),vec2(22,22),margin)) texCoord0 += (vec2(28.0, 0.0)/textureSize(Sampler0,0));
-            if(positionCheck(Position,ScreenSize,uiScale,vertID,vec2(-62,-63),vec2(22,22),margin)) texCoord0 += (vec2( 0.0,28.0)/textureSize(Sampler0,0));
-            if(positionCheck(Position,ScreenSize,uiScale,vertID,vec2(-38,-63),vec2(22,22),margin)) texCoord0 += (vec2(28.0,28.0)/textureSize(Sampler0,0));
-            if(positionCheck(Position,ScreenSize,uiScale,vertID,vec2(-50,-38),vec2(22,22),margin)) texCoord0 += (vec2( 0.0,56.0)/textureSize(Sampler0,0));
-            if(positionCheck(Position,ScreenSize,uiScale,vertID,vec2( 29,-63),vec2(22,22),margin)) texCoord0 += (vec2(56.0, 0.0)/textureSize(Sampler0,0));
-            if(positionCheck(Position,ScreenSize,uiScale,vertID,vec2( 53,-63),vec2(22,22),margin)) texCoord0 += (vec2(56.0,28.0)/textureSize(Sampler0,0)); */
-
-            if(((vertID == 0 || vertID == 1) && (vertex_compare(Position.x,ScreenSize.x,uiScale,-38,0 ,margin))) ||
-               ((vertID == 2 || vertID == 3) && (vertex_compare(Position.x,ScreenSize.x,uiScale,-38,22,margin)))) {
-
-            if(((vertID == 0 || vertID == 3) && (vertex_compare(Position.y,ScreenSize.y,uiScale,-88,0 ,margin))) ||
-               ((vertID == 1 || vertID == 2) && (vertex_compare(Position.y,ScreenSize.y,uiScale,-88,22,margin)))) {
-
-                    texCoord0 += (vec2(28.0,0.0)/textureSize(Sampler0,0));
-            }}
-
-            if(((vertID == 0 || vertID == 1) && (vertex_compare(Position.x,ScreenSize.x,uiScale,-62,0 ,margin))) ||
-               ((vertID == 2 || vertID == 3) && (vertex_compare(Position.x,ScreenSize.x,uiScale,-62,22,margin)))) {
-
-            if(((vertID == 0 || vertID == 3) && (vertex_compare(Position.y,ScreenSize.y,uiScale,-63,0 ,margin))) ||
-               ((vertID == 1 || vertID == 2) && (vertex_compare(Position.y,ScreenSize.y,uiScale,-63,22,margin)))) {
-
-                    texCoord0 += (vec2(0.0,28.0)/textureSize(Sampler0,0));
-            }}
-
-            if(((vertID == 0 || vertID == 1) && (vertex_compare(Position.x,ScreenSize.x,uiScale,-38,0 ,margin))) ||
-               ((vertID == 2 || vertID == 3) && (vertex_compare(Position.x,ScreenSize.x,uiScale,-38,22,margin)))) {
-
-            if(((vertID == 0 || vertID == 3) && (vertex_compare(Position.y,ScreenSize.y,uiScale,-63,0 ,margin))) ||
-               ((vertID == 1 || vertID == 2) && (vertex_compare(Position.y,ScreenSize.y,uiScale,-63,22,margin)))) {
-
-                    texCoord0 += (vec2(28.0,28.0)/textureSize(Sampler0,0));
-            }}
-
-            if(((vertID == 0 || vertID == 1) && (vertex_compare(Position.x,ScreenSize.x,uiScale,-50,0 ,margin))) ||
-               ((vertID == 2 || vertID == 3) && (vertex_compare(Position.x,ScreenSize.x,uiScale,-50,22,margin)))) {
-
-            if(((vertID == 0 || vertID == 3) && (vertex_compare(Position.y,ScreenSize.y,uiScale,-38,0 ,margin))) ||
-               ((vertID == 1 || vertID == 2) && (vertex_compare(Position.y,ScreenSize.y,uiScale,-38,22,margin)))) {
-
-                    texCoord0 += (vec2(0.0,56.0)/textureSize(Sampler0,0));
-            }}
-
-            if(((vertID == 0 || vertID == 1) && (vertex_compare(Position.x,ScreenSize.x,uiScale,29,0 ,10))) ||
-               ((vertID == 2 || vertID == 3) && (vertex_compare(Position.x,ScreenSize.x,uiScale,29,22,10)))) {
-
-            if(((vertID == 0 || vertID == 3) && (vertex_compare(Position.y,ScreenSize.y,uiScale,-63,0 ,margin))) ||
-               ((vertID == 1 || vertID == 2) && (vertex_compare(Position.y,ScreenSize.y,uiScale,-63,22,margin)))) {
-
-                    texCoord0 += (vec2(56.0,0.0)/textureSize(Sampler0,0));
-            }}
-
-            if(((vertID == 0 || vertID == 1) && (vertex_compare(Position.x,ScreenSize.x,uiScale,53,0 ,10))) ||
-               ((vertID == 2 || vertID == 3) && (vertex_compare(Position.x,ScreenSize.x,uiScale,53,22,10)))) {
-
-            if(((vertID == 0 || vertID == 3) && (vertex_compare(Position.y,ScreenSize.y,uiScale,-63,0 ,margin))) ||
-               ((vertID == 1 || vertID == 2) && (vertex_compare(Position.y,ScreenSize.y,uiScale,-63,22,margin)))) {
-
-                    texCoord0 += (vec2(56.0,28.0)/textureSize(Sampler0,0));
-            }}
-
-            if(((vertID == 0 || vertID == 1) && (vertex_compare(Position.x,ScreenSize.x,uiScale,49,0 ,10))) ||
-               ((vertID == 2 || vertID == 3) && (vertex_compare(Position.x,ScreenSize.x,uiScale,49,22,10)))) {
-
-            if(((vertID == 0 || vertID == 3) && (vertex_compare(Position.y,ScreenSize.y,uiScale,-3,0 ,margin))) ||
-               ((vertID == 1 || vertID == 2) && (vertex_compare(Position.y,ScreenSize.y,uiScale,-3,22,margin)))) {
-
-                    texCoord0 += (vec2(28.0,56.0)/textureSize(Sampler0,0));
-            }}
-
-            if(((vertID == 0 || vertID == 1) && (vertex_compare(Position.x,ScreenSize.x,uiScale,75,0 ,10))) ||
-               ((vertID == 2 || vertID == 3) && (vertex_compare(Position.x,ScreenSize.x,uiScale,75,22,10)))) {
-
-            if(((vertID == 0 || vertID == 3) && (vertex_compare(Position.y,ScreenSize.y,uiScale,-3,0 ,margin))) ||
-               ((vertID == 1 || vertID == 2) && (vertex_compare(Position.y,ScreenSize.y,uiScale,-3,22,margin)))) {
-
-                    pos.xy = vec2(0,0);
-            }}
+            if(color.b == 1) pos.y -= 30;
         }
     }
-
-    // ========= VILLAGER EXPERIENCE
-    if (
-        ( (vertID == 0 || vertID == 3)    && pos.y == (round(ScreenSize.y/uiScale/2)-67)  ) ||
-        ( (gl_VertexID % 1 == 0 || vertID == 2)    && pos.y == (round(ScreenSize.y/uiScale/2)-67)+5) 
-       ) {
-
-        if (pos.x >= round((ScreenSize.x/uiScale/2-2))-1   &&
-            pos.x <= round((ScreenSize.x/uiScale/2-2))+102 &&
-            round(color.a) == 254)
-        {
-            pos.y -= 30;
-        }
-    }
-    
-    
     gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
-
-
+}
 
     /*if(pos.z == 310){// ======================= HOTBAR CHECK
 
@@ -318,19 +202,6 @@ void main() {
 
         vec2 corner = corners[vertID];
 
-        pos.x -= ScreenSize.x/4/uiScale;
-        pos.y -= ScreenSize.y/2/uiScale;
+        pos.xy -= screen/vec2(2,0)/uiScale;
 
     }*/
-
-   
-
-    /*if((vertID == 0 && pos.xy == vec2(87, 284)) //===================== VIllager frown
-    ||   (vertID == 1 && pos.xy == vec2(108,284)
-    ||   (vertID == 2 && pos.xy == vec2(108,312)
-    ||   (vertID == 3 && pos.xy == vec2(87, 312) ){
-        
-        pos.xy += vec2(-8,-30);
-    }*/
-}
-
