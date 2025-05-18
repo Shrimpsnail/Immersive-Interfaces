@@ -5,20 +5,15 @@
 		"description": "§7Complete GUI overhaul\n§9GitHub §8| By Shrimpsnail"
 	},
 	"language":{
-
-		"en_us-1slot":{
-		"name":"English §a[Chest Slots]§f",
-		"region":"US"
-		},
-		"en_us-2mods":{
-		"name":"English §a[Modded]§f*",
-		"region":"US"
+		"aa_dev":{
+			"name":"Developer§a",
+			"region":"§aImmersive Interfaces"
 		}
 	},
 	"overlays": {
 		"entries": [
 			{
-				"directory": "1.21",
+				"directory": "_1.21_lang",
 				"formats": [18,100]
       		},
 			{

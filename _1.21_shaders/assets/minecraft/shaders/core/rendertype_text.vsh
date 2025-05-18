@@ -34,39 +34,27 @@ void main() {
     vec2 corner = corners[vertID];
     vec4 color = round(texture(Sampler0, UV0-(0.001*corner))*255);
 
-
-    //float uiScale = ScreenSize.x * ProjMat[0][0] * 0.5;
-    //vec2 screen = ScreenSize/uiScale;
-
     ivec2 halfScreen = ivec2(0.49+(screen/2));
 
     
     if(color.a == 1){
         textColor = vec4(1,1,1,1);
 
-
-        //                        Chests        double    barrel      minecart                    
-        //vec2[] positions   = vec2[]( vec2(0,0) , vec2(0,0) , vec2(0,0) , vec2(0,0) );
         int size[] = {0,184,200,190,176,250,78,200};
 
         if(color.r != 0) pos.x = halfScreen.x+size[int(color.r)]*(corner.x-0.5);
-        
-
-        if(color.b == 1){
-
-            pos.z += 200;
-        }
+        if(color.b == 1) pos.z += 200;
 
     }
 
-    if(color.a == 1 && round(255*Color.rgb) != vec3(64.0)) pos = vec3(0,0,0); // Remove if not in UI
+    if(color.a == 1 && round(255*Color.r) != 64.0) pos = vec3(0,0,0); // Remove if not in UI
     
     vertexColor = textColor * texelFetch(Sampler2, UV2 / 16, 0);
     gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
     vertexDistance = fog_distance(Position, FogShape);
     texCoord0 = UV0;
 }
-    // what the fuck is this for, i don't remember writing this
+    //Still don't know if i've fixed this yet
     /*if(((vertID == 0 || vertID == 1) && (vertex_compare(Position.x,ScreenSize.x,uiScale,-91,0 ,margin))) ||
        ((vertID == 2 || vertID == 3) && (vertex_compare(Position.x,ScreenSize.x,uiScale,-91,198,margin)))) {
 

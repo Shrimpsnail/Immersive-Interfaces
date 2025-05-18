@@ -3,10 +3,10 @@
 	"container.chest":					"Chest\uEc01\uEa01",
 	"entity.minecraft.chest_minecart":	"Minecart with Chest\uEc02\uEa02",
 	"container.barrel":                 "Barrel\uEc03\uEa03",
-	"container.enderchest":				"Ender Chest\uEc04\uEa04",
+	"container.enderchest":				"Ender Chest\uEc04\uEa01",
 	"container.chestDouble":			"Large Chest\uEc05\uEa05",
 
-	"entity.minecraft.hopper_minecart":	"\uEc08",
+	"entity.minecraft.hopper_minecart":	"Minecart with Hopper\uEc08\uEa08",
 
 	"container.dispenser":	"\uEc09\uEa09",
 	"container.dropper":	"\uEc10\uEa09",
