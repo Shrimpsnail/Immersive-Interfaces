@@ -71,6 +71,9 @@ def Main():
 
     for langName in langFileNames:
     
+        if(langName== "deprecated.json"):
+            continue
+    
         langFilePath = os.path.join(langFolder, langName) 
 
         with open(langFilePath, 'r', encoding='utf-8') as file:

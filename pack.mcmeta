@@ -7,18 +7,22 @@
 	"language":{
 		"aa_dev":{
 			"name":"Developer§a",
-			"region":"§aImmersive Interfaces"
+			"region":"Immersive Interfaces"
 		}
 	},
 	"overlays": {
 		"entries": [
 			{
-				"directory": "_1.21_lang",
+				"directory": "_1.20.2_lang",
 				"formats": [18,100]
       		},
 			{
 				"directory": "_1.21_shaders",
-				"formats": [42,100]
+				"formats": [42,56]
+			},
+			{
+				"directory": "_1.21.6_shaders",
+				"formats": [57,100]
 			}
 		]
   	}
