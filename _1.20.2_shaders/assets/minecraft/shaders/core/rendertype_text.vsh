@@ -40,14 +40,14 @@ void main() {
     if(color.a == 1){
         textColor = vec4(1,1,1,1);
 
-        int size[] = {0,184,200,190,176,250,78,200};
+        int size[8] = int[](0,184,200,190,176,250,78,200);
 
         if(color.r != 0) pos.x = halfScreen.x+size[int(color.r)]*(corner.x-0.5);
         if(color.b == 1) pos.z += 200;
 
     }
 
-    //if(color.a == 1 && round(255*Color.r) != 64.0) pos = vec3(0,0,0); // Remove if not in UI
+    if(color.a == 1 && round(255*Color.r) != 64.0) pos = vec3(0,0,0); // Remove if not in UI
     
     vertexColor = textColor * texelFetch(Sampler2, UV2 / 16, 0);
     gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
