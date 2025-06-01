@@ -27,7 +27,7 @@
 	"container.enchant":			"",
 
 	"advMode.command": "",
-	"advMode.previousOutput": "§b~§f/§ePrevious Output.bat§f/",
+	"advMode.previousOutput": "§9~/§bPrevious Output.bat§9/",
 
 	"advMode.mode": "Mode",
 	"advMode.type": "Type",
@@ -75,16 +75,16 @@
 	
 	"merchant.trades": "§f\uE998\uEe00",
 
-	"entity.minecraft.villager.template": 		"\uEe01\uE999\uEe02",
-	"entity.minecraft.villager.librarian": 		"\uEe03\uE999\uEe04",
+	
 
-	"entity.minecraft.villager.armorer": 		"","entity.minecraft.villager.butcher": 		"",
-	"entity.minecraft.villager.cartographer": 	"","entity.minecraft.villager.cleric": 			"",
-	"entity.minecraft.villager.farmer": 		"","entity.minecraft.villager.fisherman": 		"",
-	"entity.minecraft.villager.fletcher": 		"","entity.minecraft.villager.leatherworker": 	"",
-	"entity.minecraft.villager.mason": 			"","entity.minecraft.villager.shepherd": 		"",
-	"entity.minecraft.villager.toolsmith": 		"","entity.minecraft.villager.weaponsmith": 	"",
+	"entity.minecraft.villager.armorer": 		"",	"entity.minecraft.villager.butcher": 		"",
+	"entity.minecraft.villager.cartographer": 	"",	"entity.minecraft.villager.cleric": 		"",
+	"entity.minecraft.villager.farmer": 		"",	"entity.minecraft.villager.fisherman": 		"",
+	"entity.minecraft.villager.fletcher": 		"",	"entity.minecraft.villager.leatherworker": 	"",
+	"entity.minecraft.villager.mason": 			"",	"entity.minecraft.villager.shepherd": 		"",
+	"entity.minecraft.villager.toolsmith": 		"",	"entity.minecraft.villager.weaponsmith": 	"",
+	"entity.minecraft.villager.librarian": 		"",	"entity.minecraft.wandering_trader": 		"",
 
-	"entity.minecraft.wandering_trader": "",
+
 	"merchant.title": "%s"
 }
