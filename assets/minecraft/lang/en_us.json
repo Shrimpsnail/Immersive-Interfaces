@@ -27,20 +27,20 @@
 	"container.enchant":			"",
 
 	"advMode.command": "",
-	"advMode.previousOutput": "§b~§f/§ePrevious Output.bat§f/",
+	"advMode.previousOutput": "",
 
 	"advMode.mode": "Mode",
 	"advMode.type": "Type",
 
-	"advMode.mode.redstone": 	"\uEc23\uEc24\uEc25\uEc26\uEa11\uEa11\uEa11\uEa11",
-	"advMode.mode.sequence":	"\uEc27\uEc28\uEc29\uEc30\uEa11\uEa11\uEa11\uEa11",
-	"advMode.mode.auto": 		"\uEc31\uEc32\uEc33\uEc34\uEa11\uEa11\uEa11\uEa11",
+	"advMode.mode.auto": "Repeat",
+	"advMode.mode.redstone": "\uEc23\uEc24\uEc25\uEc26",
+	"advMode.mode.sequence": "Chain",
 
-	"advMode.mode.autoexec.bat": "\uEc36\uEa14\uEc35\uEa13",
-	"advMode.mode.redstoneTriggered": "",
+	"advMode.mode.autoexec.bat": "Chest\uEc01\uEa01",
+	"advMode.mode.redstoneTriggered": "Needs redstone",
 
-	"advMode.mode.conditional": "\uEc37\uEa14",
-	"advMode.mode.unconditional": "",
+	"advMode.mode.conditional": "Conditional",
+	"advMode.mode.unconditional": "Unconditional",
 
 	"advMode.notAllowed": "Must be an opped player in creative mode",
 	"advMode.notEnabled": "Command blocks are not enabled on this server",

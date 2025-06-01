@@ -37,7 +37,7 @@ void main() {
     ivec2 halfScreen = ivec2(0.49+(screen/2));
 
     
-    if(color.a == 1){
+    if(color.a == 1){//ui containers
         textColor = vec4(1,1,1,1);
 
         int size[8] = int[](0,184,200,190,176,250,78,200);
@@ -46,13 +46,36 @@ void main() {
         if(color.b == 1) pos.z += 200;
 
     }
-
-    if(color.a == 1 && round(255*Color.r) != 64.0) pos = vec3(0,0,0); // Remove if not in UI
+    //if(color.a == 1 && round(255*Color.r) != 64.0) pos = vec3(0,0,0); // Remove if not in UI
     
+
+
+    if(color.a == 2 && Color.rgba == vec4(1,1,1,1)){//non container uis 
+
+        if(color.r == 1){//command block
+
+            if(color.g == 1 || color.g == 3) pos.x = halfScreen.x+245*(corner.x-1)+1;
+            if(color.g == 2 || color.g == 4) pos.x = halfScreen.x+245*(corner.x  )-1;
+
+
+
+            if(color.g == 1 || color.g == 2) pos.y = -19+120*corner.y;
+            if(color.g == 3 || color.g == 4) pos.y = -19+118+171*corner.y;
+
+            if(color.b == 2) pos.x -= 49;
+            if(color.b == 3) pos.x -= 47;
+            if(color.b == 4) pos.x -= 223;
+        }
+
+
+    }else if (color.a == 2) pos = vec3(0,0,0);
+    
+    //===================================== Normal shader
     vertexColor = textColor * texelFetch(Sampler2, UV2 / 16, 0);
     gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
     vertexDistance = fog_distance(Position, FogShape);
     texCoord0 = UV0;
+    //=====================================
 
 }
     //Still don't know if i've fixed this yet

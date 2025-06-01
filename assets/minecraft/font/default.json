@@ -15,7 +15,10 @@
             "\uEa08": -200,
             "\uEa09": -78,
 
-            "\uEa11": -250
+            "\uEa11": -250,
+            "\uEa12": -245,
+            "\uEa13": -91,
+            "\uEa14": -98
 
         }
     },
@@ -101,6 +104,51 @@
 
 
 
+    {"type": "bitmap","height": 120, "ascent": 42,"chars": ["\uEc23"],
+        "file": "minecraft:gui/sprites/interfaces/command_00.png"},
+
+    {"type": "bitmap","height": 120, "ascent": 42,"chars": ["\uEc24"],
+        "file": "minecraft:gui/sprites/interfaces/command_01.png"},
+
+    {"type": "bitmap","height": 171, "ascent": 42,"chars": ["\uEc25"],
+        "file": "minecraft:gui/sprites/interfaces/command_10.png"},
+
+    {"type": "bitmap","height": 171, "ascent": 42,"chars": ["\uEc26"],
+        "file": "minecraft:gui/sprites/interfaces/command_11.png"},
+
+    
+    {"type": "bitmap","height": 120, "ascent": 42,"chars": ["\uEc27"],
+        "file": "minecraft:gui/sprites/interfaces/chain_command_00.png"},
+        
+    {"type": "bitmap","height": 120, "ascent": 42,"chars": ["\uEc28"],
+        "file": "minecraft:gui/sprites/interfaces/chain_command_01.png"},
+
+    {"type": "bitmap","height": 171, "ascent": 42,"chars": ["\uEc29"],
+        "file": "minecraft:gui/sprites/interfaces/chain_command_10.png"},
+
+    {"type": "bitmap","height": 171, "ascent": 42,"chars": ["\uEc30"],
+        "file": "minecraft:gui/sprites/interfaces/chain_command_11.png"},
+
+    
+    {"type": "bitmap","height": 120, "ascent": 42,"chars": ["\uEc31"],
+        "file": "minecraft:gui/sprites/interfaces/repeat_command_00.png"},
+        
+    {"type": "bitmap","height": 120, "ascent": 42,"chars": ["\uEc32"],
+        "file": "minecraft:gui/sprites/interfaces/repeat_command_01.png"},
+
+    {"type": "bitmap","height": 171, "ascent": 42,"chars": ["\uEc33"],
+        "file": "minecraft:gui/sprites/interfaces/repeat_command_10.png"},
+
+    {"type": "bitmap","height": 171, "ascent": 42,"chars": ["\uEc34"],
+        "file": "minecraft:gui/sprites/interfaces/repeat_command_11.png"},
+
+
+    {"type": "bitmap","height": 36, "ascent": -17,"chars": ["\uEc35"],
+        "file": "minecraft:gui/sprites/interfaces/comm_active2.png"},
+    {"type": "bitmap","height": 15, "ascent": 11,"chars": ["\uEc36"],
+        "file": "minecraft:gui/sprites/interfaces/comm_active1.png"},
+    {"type": "bitmap","height": 15, "ascent": 12,"chars": ["\uEc37"],
+        "file": "minecraft:gui/sprites/interfaces/comm_conditional.png"},
 
 
     {"type": "bitmap",

@@ -26,6 +26,8 @@
 	"container.stonecutter":		"","container.cartography_table":	"",
 	"container.enchant":			"",
 	
+	"advMode.mode.autoexec.bat": "Chest\uEc01\uEa01",
+	
 	"itemGroup.buildingBlocks": "§fBuilding Blocks",
 	"itemGroup.coloredBlocks": 	"§fColored Blocks",
 	"itemGroup.combat": 		"§fCombat",
