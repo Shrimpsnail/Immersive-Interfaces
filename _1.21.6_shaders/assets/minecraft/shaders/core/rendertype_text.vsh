@@ -54,6 +54,8 @@ void main() {
 
     //remove the shadow
     if(color.a == 3 && Color.r != 1) pos = vec3(0,0,0);
+
+    //pushback
     if(color.a == 3 && Color.r == 1) pos.z -= 1;
 
 
