@@ -18,7 +18,8 @@
             "\uEa11": -250,
             "\uEa12": -245,
             "\uEa13": -91,
-            "\uEa14": -98
+            "\uEa14": -98,
+            "\uEa21": 24
 
         }
     },
@@ -26,69 +27,69 @@
 
     
 	{"type": "bitmap","height":  91, "ascent": 23,"chars": ["\uEC01"],
-     "file": "minecraft:gui/sprites/interfaces/chests/chest.png"},
+     "file": "minecraft:gui/interfaces/chests/chest.png"},
 
     {"type": "bitmap","height": 106, "ascent": 23,"chars": ["\uEC02"],
-     "file": "minecraft:gui/sprites/interfaces/chests/chest_minecart.png"},
+     "file": "minecraft:gui/interfaces/chests/chest_minecart.png"},
 
     {"type": "bitmap","height":  85, "ascent": 14,"chars": ["\uEC03"],
-     "file": "minecraft:gui/sprites/interfaces/chests/barrel.png"},
+     "file": "minecraft:gui/interfaces/chests/barrel.png"},
 
     {"type": "bitmap","height":  91, "ascent": 23,"chars": ["\uEC04"],
-     "file": "minecraft:gui/sprites/interfaces/chests/ender_chest.png"},
+     "file": "minecraft:gui/interfaces/chests/ender_chest.png"},
 
     {"type": "bitmap","height": 159, "ascent": 34,"chars": ["\uEC05"],
-     "file": "minecraft:gui/sprites/interfaces/chests/large_chest.png"},
+     "file": "minecraft:gui/interfaces/chests/large_chest.png"},
 
     {
         "type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/hopper_minecart.png",
+        "file": "minecraft:gui/interfaces/hopper_minecart.png",
         "height": 71, "ascent": 14,
         "chars": ["\uEC08"]
     },
     { 
         "type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/dispenser_block.png",
+        "file": "minecraft:gui/interfaces/dispenser_block.png",
         "height": 112, "ascent": 45,
         "chars": ["\uEc09"]
     },
     { 
         "type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/dropper_block.png",
+        "file": "minecraft:gui/interfaces/dropper_block.png",
         "height": 112, "ascent": 45,
         "chars": ["\uEc10"]
     },
 
 
     {"type": "bitmap","height": 174, "ascent": 23,"chars": ["\uEc11"],
-        "file": "minecraft:gui/sprites/interfaces/chests/boat_oak.png"},
+        "file": "minecraft:gui/interfaces/chests/boat_oak.png"},
 
     {"type": "bitmap","height": 174, "ascent": 23,"chars": ["\uEc12"],
-        "file": "minecraft:gui/sprites/interfaces/chests/boat_spruce.png"},
+        "file": "minecraft:gui/interfaces/chests/boat_spruce.png"},
 
     {"type": "bitmap","height": 174, "ascent": 23,"chars": ["\uEc13"],
-        "file": "minecraft:gui/sprites/interfaces/chests/boat_birch.png"},
+        "file": "minecraft:gui/interfaces/chests/boat_birch.png"},
 
     {"type": "bitmap","height": 174, "ascent": 23,"chars": ["\uEc14"],
-        "file": "minecraft:gui/sprites/interfaces/chests/boat_dark_oak.png"},
+        "file": "minecraft:gui/interfaces/chests/boat_dark_oak.png"},
 
     {"type": "bitmap","height": 174, "ascent": 23,"chars": ["\uEc15"],
-        "file": "minecraft:gui/sprites/interfaces/chests/boat_acacia.png"},
+        "file": "minecraft:gui/interfaces/chests/boat_acacia.png"},
 
     {"type": "bitmap","height": 174, "ascent": 23,"chars": ["\uEc16"],
-        "file": "minecraft:gui/sprites/interfaces/chests/boat_jungle.png"},
+        "file": "minecraft:gui/interfaces/chests/boat_jungle.png"},
 
     {"type": "bitmap","height": 174, "ascent": 23,"chars": ["\uEc17"],
-        "file": "minecraft:gui/sprites/interfaces/chests/boat_mangrove.png"},
+        "file": "minecraft:gui/interfaces/chests/boat_mangrove.png"},
 
     {"type": "bitmap","height": 174, "ascent": 23,"chars": ["\uEc18"],
-        "file": "minecraft:gui/sprites/interfaces/chests/boat_cherry.png"},
+        "file": "minecraft:gui/interfaces/chests/boat_cherry.png"},
 
     {"type": "bitmap","height": 174, "ascent": 23,"chars": ["\uEc19"],
-        "file": "minecraft:gui/sprites/interfaces/chests/boat_bamboo.png"},
+        "file": "minecraft:gui/interfaces/chests/boat_bamboo.png"},
 
     {"type": "bitmap","height": 174, "ascent": 23,"chars": ["\uEc20"],
-        "file": "minecraft:gui/sprites/interfaces/chests/boat_pale.png"},
+        "file": "minecraft:gui/interfaces/chests/boat_pale.png"},
 
 
 
@@ -96,83 +97,87 @@
 
 
     
-    {"type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/beacon_glow.png",
-        "height": 183, "ascent": 42,
-        "chars": ["\uEc22"]
-    },
+    {"type": "bitmap", "height": 28, "ascent": -88, "chars": ["\uEc21"],
+        "file": "minecraft:gui/interfaces/beacon_curtain.png"},
+    {"type": "bitmap", "height": 183, "ascent": 42, "chars": ["\uEc22"],
+        "file": "minecraft:gui/interfaces/beacon_glow.png"},
 
 
 
     {"type": "bitmap","height": 120, "ascent": 42,"chars": ["\uEc23"],
-        "file": "minecraft:gui/sprites/interfaces/command_00.png"},
+        "file": "minecraft:gui/interfaces/command_00.png"},
 
     {"type": "bitmap","height": 120, "ascent": 42,"chars": ["\uEc24"],
-        "file": "minecraft:gui/sprites/interfaces/command_01.png"},
+        "file": "minecraft:gui/interfaces/command_01.png"},
 
     {"type": "bitmap","height": 171, "ascent": 42,"chars": ["\uEc25"],
-        "file": "minecraft:gui/sprites/interfaces/command_10.png"},
+        "file": "minecraft:gui/interfaces/command_10.png"},
 
     {"type": "bitmap","height": 171, "ascent": 42,"chars": ["\uEc26"],
-        "file": "minecraft:gui/sprites/interfaces/command_11.png"},
+        "file": "minecraft:gui/interfaces/command_11.png"},
 
     
     {"type": "bitmap","height": 120, "ascent": 42,"chars": ["\uEc27"],
-        "file": "minecraft:gui/sprites/interfaces/chain_command_00.png"},
+        "file": "minecraft:gui/interfaces/chain_command_00.png"},
         
     {"type": "bitmap","height": 120, "ascent": 42,"chars": ["\uEc28"],
-        "file": "minecraft:gui/sprites/interfaces/chain_command_01.png"},
+        "file": "minecraft:gui/interfaces/chain_command_01.png"},
 
     {"type": "bitmap","height": 171, "ascent": 42,"chars": ["\uEc29"],
-        "file": "minecraft:gui/sprites/interfaces/chain_command_10.png"},
+        "file": "minecraft:gui/interfaces/chain_command_10.png"},
 
     {"type": "bitmap","height": 171, "ascent": 42,"chars": ["\uEc30"],
-        "file": "minecraft:gui/sprites/interfaces/chain_command_11.png"},
+        "file": "minecraft:gui/interfaces/chain_command_11.png"},
 
     
     {"type": "bitmap","height": 120, "ascent": 42,"chars": ["\uEc31"],
-        "file": "minecraft:gui/sprites/interfaces/repeat_command_00.png"},
+        "file": "minecraft:gui/interfaces/repeat_command_00.png"},
         
     {"type": "bitmap","height": 120, "ascent": 42,"chars": ["\uEc32"],
-        "file": "minecraft:gui/sprites/interfaces/repeat_command_01.png"},
+        "file": "minecraft:gui/interfaces/repeat_command_01.png"},
 
     {"type": "bitmap","height": 171, "ascent": 42,"chars": ["\uEc33"],
-        "file": "minecraft:gui/sprites/interfaces/repeat_command_10.png"},
+        "file": "minecraft:gui/interfaces/repeat_command_10.png"},
 
     {"type": "bitmap","height": 171, "ascent": 42,"chars": ["\uEc34"],
-        "file": "minecraft:gui/sprites/interfaces/repeat_command_11.png"},
+        "file": "minecraft:gui/interfaces/repeat_command_11.png"},
 
 
     {"type": "bitmap","height": 36, "ascent": -17,"chars": ["\uEc35"],
-        "file": "minecraft:gui/sprites/interfaces/comm_active2.png"},
-    {"type": "bitmap","height": 15, "ascent": 11,"chars": ["\uEc36"],
-        "file": "minecraft:gui/sprites/interfaces/comm_active1.png"},
-    {"type": "bitmap","height": 15, "ascent": 12,"chars": ["\uEc37"],
-        "file": "minecraft:gui/sprites/interfaces/comm_conditional.png"},
+        "file": "minecraft:gui/interfaces/comm_active2.png"},
+        
+    {"type": "bitmap","height": 22, "ascent": 14,"chars": ["\uEc36"],
+        "file": "minecraft:gui/interfaces/comm_active1.png"},
+    {"type": "bitmap","height": 22, "ascent": 14,"chars": ["\uEc37"],
+        "file": "minecraft:gui/interfaces/comm_conditional.png"},
+    {"type": "bitmap","height": 22, "ascent": 14,"chars": ["\uEc38"],
+        "file": "minecraft:gui/interfaces/comm_unconditional.png"},
+    {"type": "bitmap","height": 22, "ascent": 14,"chars": ["\uEc39"],
+        "file": "minecraft:gui/interfaces/comm_redstone.png"},
 
 
     {"type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/trades.png",
+        "file": "minecraft:gui/interfaces/trades.png",
         "height": 140, "ascent": -5,
         "chars": ["\uEe00"]
     },
 
     {"type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/villagers/base_trades.png",
+        "file": "minecraft:gui/interfaces/villagers/base_trades.png",
         "height": 166, "ascent": 13,
         "chars": ["\uEe01"]
     },{"type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/villagers/base_counter.png",
+        "file": "minecraft:gui/interfaces/villagers/base_counter.png",
         "height": 166, "ascent": 13,
         "chars": ["\uEe02"]
     },
 
     {"type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/villagers/libr_trades.png",
+        "file": "minecraft:gui/interfaces/villagers/libr_trades.png",
         "height": 167, "ascent": 14,
         "chars": ["\uEe03"]
     },{"type": "bitmap",
-        "file": "minecraft:gui/sprites/interfaces/villagers/libr_counter.png",
+        "file": "minecraft:gui/interfaces/villagers/libr_counter.png",
         "height": 167, "ascent": 14,
         "chars": ["\uEe04"]
     }
