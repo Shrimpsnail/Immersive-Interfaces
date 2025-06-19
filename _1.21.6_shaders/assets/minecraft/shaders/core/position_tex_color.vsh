@@ -16,10 +16,6 @@ uniform sampler2D Sampler0;
 out vec2 texCoord0;
 out vec4 vertexColor;// 1.21
 
-//float uiScale = ScreenSize.x * ProjMat[0][0] * 0.5;
-//vec2 screen = ScreenSize/uiScale;
-
-
 vec2[] corners = vec2[](vec2(0, 0), vec2(0, 1), vec2(1, 1), vec2(1, 0));
 vec2 screen = 2 / vec2(ProjMat[0][0], -ProjMat[1][1]);
 float margin = 1;
@@ -112,12 +108,14 @@ void main() {
             if (vertID == 1 || vertID == 2)    pos.xy += ((corner-0.5)*2*vec2(45,51));
             texCoord0 = corner*(320.0/512.0);
 
+            /*
             switch(vertID){
-                case 0:pos.z += 400;break;
-                case 1:pos.z +=  90;break;
-                case 2:pos.z +=  90;break;
-                case 3:pos.z += 280;break;
-            } 
+                case 0:pos.z +=0;break;
+                case 1:pos.z +=0;break;
+                case 2:pos.z +=0;break;
+                case 3:pos.z +=0;break;
+            }
+            */
             
         }
         if(color.r == 8){ //base 320 - Creative
@@ -148,9 +146,9 @@ void main() {
 
             texCoord0 = corner*(320.0/512.0)/2;
 
-                 if(mod((/*GameTime*24000*/ 1 ),animation_speed) <   animation_speed/frames) texCoord0.x += 0;
-            else if(mod((/*GameTime*24000*/ 1 ),animation_speed) < 2*animation_speed/frames) texCoord0.x += (320.0/512.0)/2;
-            else if(mod((/*GameTime*24000*/ 1 ),animation_speed) <   animation_speed       ) texCoord0.y += (320.0/512.0)/2;
+                 if(mod((GameTime*24000),animation_speed) <   animation_speed/frames) texCoord0.x += 0;
+            else if(mod((GameTime*24000),animation_speed) < 2*animation_speed/frames) texCoord0.x += (320.0/512.0)/2;
+            else if(mod((GameTime*24000),animation_speed) <   animation_speed       ) texCoord0.y += (320.0/512.0)/2;
         }
 
 
@@ -162,10 +160,10 @@ void main() {
 
             if(color.b == 1){// Beacon icons
 
-                texCoord0.x -= (18.0/256.0)*corner.x;
+                texCoord0.x -= (18.0/textureSize(Sampler0,0).x)*corner.x;
 
                 if((posCheckX(-60,18)) || (posCheckX(-48,18)) || (posCheckX(-36,18)) || (posCheckX( 31,18))) pos = vec3(0,0,0);
-                if (posCheckX(55,18)) texCoord0.x += 18.0/256.0;
+                if (posCheckX(55,18)) texCoord0.x += 18.0/textureSize(Sampler0,0).x;
             }
 
             if(color.b == 2){ // Beacon buttons
@@ -182,7 +180,7 @@ void main() {
                 if(posCheck(vec2( 53,-63),22)) texCoord0 += vec2(56,28)/textureSize(Sampler0,0); // beacon on
                 if(posCheck(vec2( 75, -3),22)) pos.xy = vec2(0,0);                               // cross button
             }
-            pos.z += 400;
+            pos.z += 0;
         }
 
         if(color.g == 2){// VILLAGER
@@ -190,5 +188,10 @@ void main() {
             if(color.b == 1) pos.y -= 30;
         }
     }
+
+    //Priority
+    if(color.a == 3 || color.a == 182 ) pos.z += 1;
+
+
     gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
 }

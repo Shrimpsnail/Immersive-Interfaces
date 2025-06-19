@@ -46,7 +46,7 @@ void main() {
         if(color.b == 1) pos.z += 200;
 
     }
-    //if(color.a == 1 && round(255*Color.r) != 64.0) pos = vec3(0,0,0); // Remove if not in UI
+    if(color.a == 1 && round(255*Color.r) != 64.0) pos = vec3(0,0,0); // Remove if not in UI
     
 
 
@@ -56,8 +56,6 @@ void main() {
 
             if(color.g == 1 || color.g == 3) pos.x = halfScreen.x+245*(corner.x-1)+1;
             if(color.g == 2 || color.g == 4) pos.x = halfScreen.x+245*(corner.x  )-1;
-
-
 
             if(color.g == 1 || color.g == 2) pos.y = -19+120*corner.y;
             if(color.g == 3 || color.g == 4) pos.y = -19+118+171*corner.y;

@@ -37,10 +37,10 @@
 	"advMode.mode.auto": 		"\uEc31\uEc32\uEc33\uEc34\uEa11\uEa11\uEa11\uEa11",
 
 	"advMode.mode.autoexec.bat": "\uEc36\uEa14\uEc35\uEa13",
-	"advMode.mode.redstoneTriggered": "",
+	"advMode.mode.redstoneTriggered": "\uEc39\uEa14",
 
 	"advMode.mode.conditional": "\uEc37\uEa14",
-	"advMode.mode.unconditional": "",
+	"advMode.mode.unconditional": "\uEc38\uEa14",
 
 	"advMode.notAllowed": "Must be an opped player in creative mode",
 	"advMode.notEnabled": "Command blocks are not enabled on this server",
@@ -70,7 +70,7 @@
 	"itemGroup.spawnEggs": 		"§fSpawn Eggs",
 	"itemGroup.tools": 			"§fTools & Utilities",
 	
-	"block.minecraft.beacon.primary": "",
+	"block.minecraft.beacon.primary": "§f\uEa21\uEc21",
 	"block.minecraft.beacon.secondary": "",
 	
 	"merchant.trades": "§f\uE998\uEe00",
