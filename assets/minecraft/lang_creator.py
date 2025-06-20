@@ -83,7 +83,7 @@ def Main():
 
             for key in  suffixes.keys(): newLang[key] = langFile.get(key)+suffixes.get(key)
             for key in replacers.keys(): newLang[key] = replacers.get(key)
-            for key in  prefixes.keys(): newLang[key] = prefixes.get(key)+langFile.get(key)
+            #for key in  prefixes.keys(): newLang[key] = prefixes.get(key)+langFile.get(key)
 
             with open(program_folder+"/lang/"+langName, 'w', encoding='utf-8') as newLangFile:
                 json.dump(newLang,newLangFile,indent=4)
