@@ -1,9 +1,9 @@
 {
-    "container.chest": "Chest\uec01\uea01",
+    "container.chest": "\u0bae\u0bbe\u0bb0\u0bcd\u0baa\u0bc1\uec01\uea01",
     "entity.minecraft.chest_minecart": "Minecart with Chest\uec02\uea02",
-    "container.barrel": "Barrel\uec03\uea03",
-    "container.enderchest": "Ender Chest\uec04\uea04",
-    "container.chestDouble": "Large Chest\uec05\uea05",
+    "container.barrel": "\u0baa\u0bc0\u0baa\u0bcd\u0baa\u0bbe\u0baf\u0bcd\uec03\uea03",
+    "container.enderchest": "\u0b8e\u0ba3\u0bcd\u0b9f\u0bb0\u0bcd \u0bae\u0bbe\u0bb0\u0bcd\u0baa\u0bc1\uec04\uea04",
+    "container.chestDouble": "\u0baa\u0bc6\u0bb0\u0bbf\u0baf \u0bae\u0bbe\u0bb0\u0bcd\u0baa\u0bc1\uec05\uea05",
     "entity.minecraft.hopper_minecart": "Minecart with Hopper\uec08\uea08",
     "entity.minecraft.oak_chest_boat": "Oak Boat with Chest\uec11\uea11",
     "entity.minecraft.spruce_chest_boat": "Spruce Boat with Chest\uec12\uea11",

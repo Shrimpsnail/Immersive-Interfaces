@@ -37,20 +37,34 @@ def Main():
     "container.loom": 		"", "container.hopper":				"", "container.grindstone_title":   "",
     "container.stonecutter":"", "container.cartography_table":	"", "container.enchant":		    "",
     
-	"block.minecraft.beacon.primary": "","block.minecraft.beacon.secondary": "",
+	"block.minecraft.beacon.primary": "§f\uEa21\uEc21",
+	"block.minecraft.beacon.secondary": "",
+
+
+
+	"advMode.command": "",
+	"advMode.setCommand": "",
+    
+	"advMode.mode.redstone": 	"\uEc23\uEc24\uEc25\uEc26\uEa11\uEa11\uEa11\uEa11",
+	"advMode.mode.sequence":	"\uEc27\uEc28\uEc29\uEc30\uEa11\uEa11\uEa11\uEa11",
+	"advMode.mode.auto": 		"\uEc31\uEc32\uEc33\uEc34\uEa11\uEa11\uEa11\uEa11",
+
+	"advMode.mode.autoexec.bat": "\uEc36\uEa14\uEc35\uEa13",
+	"advMode.mode.redstoneTriggered": "\uEc39\uEa14",
+
+	"advMode.mode.conditional": "\uEc37\uEa14",
+	"advMode.mode.unconditional": "\uEc38\uEa14",
+	
+
+    
+	"merchant.trades": "§f\uE998\uEe00",
 
     }
 
     prefixes ={
+    
+	"advMode.previousOutput": "§9~/§b"
 
-    "itemGroup.buildingBlocks": "§f",   "itemGroup.coloredBlocks": 	"§f",
-    "itemGroup.combat": 		"§f",   "itemGroup.consumables": 	"§f",
-    "itemGroup.crafting": 		"§f",   "itemGroup.foodAndDrink": 	"§f",
-    "itemGroup.functional": 	"§f",   "itemGroup.hotbar": 		"§f",
-    "itemGroup.ingredients": 	"§f",   "itemGroup.inventory": 		"§f",
-    "itemGroup.natural": 		"§f",   "itemGroup.op": 			"§f",
-    "itemGroup.redstone": 		"§f",   "itemGroup.search": 		"§f",
-    "itemGroup.spawnEggs": 		"§f",   "itemGroup.tools": 			"§f"
 
     }
 

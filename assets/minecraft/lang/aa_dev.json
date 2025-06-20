@@ -27,10 +27,8 @@
 	"container.enchant":			"",
 
 	"advMode.command": "",
-	"advMode.previousOutput": "§9~/§bPrevious Output.bat§9/",
-
-	"advMode.mode": "Mode",
-	"advMode.type": "Type",
+	"advMode.setCommand": "",
+	"advMode.previousOutput": "§9~/§bPrevious Output.bat",
 
 	"advMode.mode.redstone": 	"\uEc23\uEc24\uEc25\uEc26\uEa11\uEa11\uEa11\uEa11",
 	"advMode.mode.sequence":	"\uEc27\uEc28\uEc29\uEc30\uEa11\uEa11\uEa11\uEa11",
@@ -41,50 +39,12 @@
 
 	"advMode.mode.conditional": "\uEc37\uEa14",
 	"advMode.mode.unconditional": "\uEc38\uEa14",
-
-	"advMode.notAllowed": "Must be an opped player in creative mode",
-	"advMode.notEnabled": "Command blocks are not enabled on this server",
 	
-	"advMode.setCommand": "",
-	"advMode.setCommand.success": "Command set: %s",
-	"advMode.trackOutput": "Track output",
-	"advMode.triggering": "Triggering",
-
-
-
-	
-	"itemGroup.buildingBlocks": "§fBuilding Blocks",
-	"itemGroup.coloredBlocks": 	"§fColored Blocks",
-	"itemGroup.combat": 		"§fCombat",
-	"itemGroup.consumables": 	"§fConsumables",
-	"itemGroup.crafting": 		"§fCrafting",
-	"itemGroup.foodAndDrink": 	"§fFood & Drinks",
-	"itemGroup.functional": 	"§fFunctional Blocks",
-	"itemGroup.hotbar": 		"§fSaved Hotbars",
-	"itemGroup.ingredients": 	"§fIngredients",
-	"itemGroup.inventory": 		"§fSurvival Inventory",
-	"itemGroup.natural": 		"§fNatural Blocks",
-	"itemGroup.op": 			"§fOperator Utilities",
-	"itemGroup.redstone": 		"§fRedstone Blocks",
-	"itemGroup.search": 		"§fSearch",
-	"itemGroup.spawnEggs": 		"§fSpawn Eggs",
-	"itemGroup.tools": 			"§fTools & Utilities",
 	
 	"block.minecraft.beacon.primary": "§f\uEa21\uEc21",
 	"block.minecraft.beacon.secondary": "",
 	
 	"merchant.trades": "§f\uE998\uEe00",
 
-	
-
-	"entity.minecraft.villager.armorer": 		"",	"entity.minecraft.villager.butcher": 		"",
-	"entity.minecraft.villager.cartographer": 	"",	"entity.minecraft.villager.cleric": 		"",
-	"entity.minecraft.villager.farmer": 		"",	"entity.minecraft.villager.fisherman": 		"",
-	"entity.minecraft.villager.fletcher": 		"",	"entity.minecraft.villager.leatherworker": 	"",
-	"entity.minecraft.villager.mason": 			"",	"entity.minecraft.villager.shepherd": 		"",
-	"entity.minecraft.villager.toolsmith": 		"",	"entity.minecraft.villager.weaponsmith": 	"",
-	"entity.minecraft.villager.librarian": 		"",	"entity.minecraft.wandering_trader": 		"",
-
-
-	"merchant.title": "%s"
+	"merchant.title": ""
 }
