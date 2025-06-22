@@ -19,7 +19,10 @@
             "\uEa12": -245,
             "\uEa13": -91,
             "\uEa14": -98,
-            "\uEa21": 24
+            "\uEa21": 24,
+            
+            "\uEa40": -25,
+            "\uEa41": -34
 
         }
     },
@@ -104,42 +107,42 @@
 
 
 
-    {"type": "bitmap","height": 120, "ascent": 42,"chars": ["\uEc23"],
+    {"type": "bitmap","height": 120, "ascent": 120,"chars": ["\uEc23"],
         "file": "minecraft:gui/interfaces/command_00.png"},
 
-    {"type": "bitmap","height": 120, "ascent": 42,"chars": ["\uEc24"],
+    {"type": "bitmap","height": 120, "ascent": 120,"chars": ["\uEc24"],
         "file": "minecraft:gui/interfaces/command_01.png"},
 
-    {"type": "bitmap","height": 171, "ascent": 42,"chars": ["\uEc25"],
+    {"type": "bitmap","height": 171, "ascent": 171,"chars": ["\uEc25"],
         "file": "minecraft:gui/interfaces/command_10.png"},
 
-    {"type": "bitmap","height": 171, "ascent": 42,"chars": ["\uEc26"],
+    {"type": "bitmap","height": 171, "ascent": 171,"chars": ["\uEc26"],
         "file": "minecraft:gui/interfaces/command_11.png"},
 
     
-    {"type": "bitmap","height": 120, "ascent": 42,"chars": ["\uEc27"],
+    {"type": "bitmap","height": 120, "ascent": 120,"chars": ["\uEc27"],
         "file": "minecraft:gui/interfaces/chain_command_00.png"},
         
-    {"type": "bitmap","height": 120, "ascent": 42,"chars": ["\uEc28"],
+    {"type": "bitmap","height": 120, "ascent": 120,"chars": ["\uEc28"],
         "file": "minecraft:gui/interfaces/chain_command_01.png"},
 
-    {"type": "bitmap","height": 171, "ascent": 42,"chars": ["\uEc29"],
+    {"type": "bitmap","height": 171, "ascent": 171,"chars": ["\uEc29"],
         "file": "minecraft:gui/interfaces/chain_command_10.png"},
 
-    {"type": "bitmap","height": 171, "ascent": 42,"chars": ["\uEc30"],
+    {"type": "bitmap","height": 171, "ascent": 171,"chars": ["\uEc30"],
         "file": "minecraft:gui/interfaces/chain_command_11.png"},
 
     
-    {"type": "bitmap","height": 120, "ascent": 42,"chars": ["\uEc31"],
+    {"type": "bitmap","height": 120, "ascent": 120,"chars": ["\uEc31"],
         "file": "minecraft:gui/interfaces/repeat_command_00.png"},
         
-    {"type": "bitmap","height": 120, "ascent": 42,"chars": ["\uEc32"],
+    {"type": "bitmap","height": 120, "ascent": 120,"chars": ["\uEc32"],
         "file": "minecraft:gui/interfaces/repeat_command_01.png"},
 
-    {"type": "bitmap","height": 171, "ascent": 42,"chars": ["\uEc33"],
+    {"type": "bitmap","height": 171, "ascent": 171,"chars": ["\uEc33"],
         "file": "minecraft:gui/interfaces/repeat_command_10.png"},
 
-    {"type": "bitmap","height": 171, "ascent": 42,"chars": ["\uEc34"],
+    {"type": "bitmap","height": 171, "ascent": 171,"chars": ["\uEc34"],
         "file": "minecraft:gui/interfaces/repeat_command_11.png"},
 
 
@@ -154,6 +157,12 @@
         "file": "minecraft:gui/interfaces/comm_unconditional.png"},
     {"type": "bitmap","height": 22, "ascent": 14,"chars": ["\uEc39"],
         "file": "minecraft:gui/interfaces/comm_redstone.png"},
+
+
+    {"type": "bitmap","height": 7, "ascent": 7,"chars": ["\uEc40"],
+        "file": "minecraft:gui/interfaces/done_text.png"},
+    {"type": "bitmap","height": 7, "ascent": 7,"chars": ["\uEc41"],
+        "file": "minecraft:gui/interfaces/cancel_text.png"},
 
 
     {"type": "bitmap",

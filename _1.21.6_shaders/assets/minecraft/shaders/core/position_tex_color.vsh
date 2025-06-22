@@ -190,8 +190,12 @@ void main() {
     }
 
     //Priority
-    if(color.a == 3 || color.a == 182 ) pos.z += 1;
 
+    if(pos.xy / screen == corner){
+        pos.z -=20;
+    }
+
+    pos.z+=0;
 
     gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
 }
