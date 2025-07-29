@@ -21,6 +21,10 @@
 				"formats": [42,56]
 			},
 			{
+				"directory": "_1.21.1_shader_fix",
+				"formats": [34,41]
+			},
+			{
 				"directory": "_1.21.6_shaders",
 				"formats": [57,100]
 			}
