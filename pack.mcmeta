@@ -2,7 +2,7 @@
 	"pack": {
 		"pack_format": 15,
 		"supported_formats": [15,100],
-		"description": "§7Complete GUI overhaul\n§9GitHub §8| By Shrimpsnail"
+		"description": "§7Complete GUI overhaul\n§cBeta V0.7 §8| By Shrimpsnail"
 	},
 	"language":{
 		"aa_dev":{
@@ -19,6 +19,10 @@
 			{
 				"directory": "_1.20.2_shaders",
 				"formats": [42,56]
+			},
+			{
+				"directory": "_1.21.1_shader_fix",
+				"formats": [34,41]
 			},
 			{
 				"directory": "_1.21.6_shaders",

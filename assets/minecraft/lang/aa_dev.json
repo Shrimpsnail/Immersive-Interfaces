@@ -40,8 +40,8 @@
 	"advMode.mode.conditional": "\uEc37\uEa14",
 	"advMode.mode.unconditional": "\uEc38\uEa14",
   
-	"gui.done": "Done\uEa40\uEc40",
-	"gui.cancel": "Cancel\uEa41\uEc41",
+	"gui.done": "§5Done",
+	"gui.cancel": "§5Cancel",
 	
 	
 	"block.minecraft.beacon.primary": "§f\uEa21\uEc21",

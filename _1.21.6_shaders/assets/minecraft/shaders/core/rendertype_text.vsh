@@ -37,12 +37,14 @@ void main() {
 
     
     if(color.a == 1){//ui containers
-        textColor = vec4(1,1,1,1);
+        textColor = vec4(1);
 
         int size[8] = int[](0,184,200,190,176,250,78,200);
 
         if(color.r != 0) pos.x = halfScreen.x+size[int(color.r)]*(corner.x-0.5);
         if(color.b == 1) pos.z += 200;
+
+        if(color.r == 6) pos.z -= 1; //dispenser bodge
 
     }
     if(color.a == 1 && round(255*Color.r) != 64.0) pos = vec3(0,0,0); // Remove if not in UI
@@ -57,7 +59,7 @@ void main() {
     //if(color.a == 3 && Color.r == 1) pos.z -= 1;
 
 
-    if(color.a == 2 && Color.rgba == vec4(1,1,1,1)){//non container uis 
+    if(color.a == 2 && Color.rgba == vec4(1)){//non container uis 
 
         if(color.r == 1){//command block
 
@@ -74,16 +76,17 @@ void main() {
         }
 
 
-        //Push it
-        if(color.r == 2){
-
-            pos.z +=5;
-        }
+        
 
 
     }else if (color.a == 2) pos = vec3(0,0,0);
     
-    pos.z +=0;
+    //Push purple
+    if(Color.rgb == vec3(2.0/3.0,0,2.0/3.0)){
+
+        textColor = vec4(1);
+        pos.z +=5;
+    }
 
     //===================================== Normal shader
     vertexColor = textColor * texelFetch(Sampler2, UV2 / 16, 0);

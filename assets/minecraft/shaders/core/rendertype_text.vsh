@@ -68,6 +68,13 @@ void main() {
 
 
     }else if (color.a == 2) pos = vec3(0,0,0);
+
+    //Push purple
+    if(Color.rgb == vec3(2.0/3.0,0,2.0/3.0)){
+
+        textColor = vec4(1);
+        pos.z +=5;
+    }
     
     //===================================== Normal shader
     vertexColor = textColor * texelFetch(Sampler2, UV2 / 16, 0);

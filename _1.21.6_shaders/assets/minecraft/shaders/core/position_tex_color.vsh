@@ -91,14 +91,25 @@ void main() {
             
             int rows= 0;
 
-            if(posChecky(-31,96)) rows=0;
-            if(posChecky(-22,96)) rows=1;
-            if(posChecky(-13,96)) rows=2;
-            if(posChecky( -4,96)) rows=3;
-            if(posChecky(  5,96)) rows=4;
-            if(posChecky( 14,96)) rows=5;
+                 if(posChecky(-31,96)) rows=0;
+            else if(posChecky(-22,96)) rows=1;
+            else if(posChecky(-13,96)) rows=2;
+            else if(posChecky( -4,96)) rows=3;
+            else if(posChecky(  5,96)) rows=4;
+            else if(posChecky( 14,96)) rows=5;
 
             texCoord0.x += rows/6.0;
+            
+            
+            if (UV0.y == 0.27734375 || UV0.y == 0.48828125) { 
+                if (vertID == 2) pos.xy = vec2(0, 0);
+            } else if (UV0.y == 0.4921875 || UV0.y == 0.8671875) {
+                vec2 screenScale = ScreenSize / (ScreenSize.x * ProjMat[0][0] * 0.5);
+                float size = Position.y - round(screenScale.y * 0.5) - 62.5;
+                if (vertID == 0 || vertID == 3) { size += 96; pos.y -= 125; }
+                texCoord0.x = (corners[vertID].x + int(size / 9)) / 6;
+            }
+        
 
 
         }
@@ -107,15 +118,6 @@ void main() {
             if (vertID == 0 || vertID == 3)    pos.xy += ((corner-0.5)*2*vec2(45,50));
             if (vertID == 1 || vertID == 2)    pos.xy += ((corner-0.5)*2*vec2(45,51));
             texCoord0 = corner*(320.0/512.0);
-
-            /*
-            switch(vertID){
-                case 0:pos.z +=0;break;
-                case 1:pos.z +=0;break;
-                case 2:pos.z +=0;break;
-                case 3:pos.z +=0;break;
-            }
-            */
             
         }
         if(color.r == 8){ //base 320 - Creative
@@ -153,6 +155,8 @@ void main() {
 
 
     }
+    //≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+    //≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 
     if(color.a == 2){ //Custom SPRITES
 
@@ -171,16 +175,15 @@ void main() {
                 pos.xy += ((corner-0.5)*2*3);
                 texCoord0 -= corner*(56.0/textureSize(Sampler0,0));      // speed (default)
 
-                if(posCheck(vec2(-38,-88),22)) texCoord0 += vec2(28, 0)/textureSize(Sampler0,0); // haste
-                if(posCheck(vec2(-62,-63),22)) texCoord0 += vec2( 0,28)/textureSize(Sampler0,0); // resistance
-                if(posCheck(vec2(-38,-63),22)) texCoord0 += vec2(28,28)/textureSize(Sampler0,0); // jump boost
-                if(posCheck(vec2(-50,-38),22)) texCoord0 += vec2( 0,56)/textureSize(Sampler0,0); // strength
-                if(posCheck(vec2( 29,-63),22)) texCoord0 += vec2(56, 0)/textureSize(Sampler0,0); // regen
-                if(posCheck(vec2( 49, -3),22)) texCoord0 += vec2(28,56)/textureSize(Sampler0,0); // tier 2
-                if(posCheck(vec2( 53,-63),22)) texCoord0 += vec2(56,28)/textureSize(Sampler0,0); // beacon on
-                if(posCheck(vec2( 75, -3),22)) pos.xy = vec2(0,0);                               // cross button
+                 if(posCheck(vec2(-38,-88),22)) texCoord0 += vec2(28, 0)/textureSize(Sampler0,0); // haste
+            else if(posCheck(vec2(-62,-63),22)) texCoord0 += vec2( 0,28)/textureSize(Sampler0,0); // resistance
+            else if(posCheck(vec2(-38,-63),22)) texCoord0 += vec2(28,28)/textureSize(Sampler0,0); // jump boost
+            else if(posCheck(vec2(-50,-38),22)) texCoord0 += vec2( 0,56)/textureSize(Sampler0,0); // strength
+            else if(posCheck(vec2( 29,-63),22)) texCoord0 += vec2(56, 0)/textureSize(Sampler0,0); // regen
+            else if(posCheck(vec2( 49, -3),22)) texCoord0 += vec2(28,56)/textureSize(Sampler0,0); // tier 2
+            else if(posCheck(vec2( 53,-63),22)) texCoord0 += vec2(56,28)/textureSize(Sampler0,0); // beacon on
+            else if(posCheck(vec2( 75, -3),22)) pos.xy = vec2(0,0);                               // cross button
             }
-            pos.z += 0;
         }
 
         if(color.g == 2){// VILLAGER
@@ -188,14 +191,6 @@ void main() {
             if(color.b == 1) pos.y -= 30;
         }
     }
-
-    //Priority
-
-    if(pos.xy / screen == corner){
-        pos.z -=20;
-    }
-
-    pos.z+=0;
 
     gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
 }
