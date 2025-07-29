@@ -99,19 +99,6 @@ void main() {
             else if(posChecky( 14,96)) rows=5;
 
             texCoord0.x += rows/6.0;
-            
-            
-            if (UV0.y == 0.27734375 || UV0.y == 0.48828125) { 
-                if (vertID == 2) pos.xy = vec2(0, 0);
-            } else if (UV0.y == 0.4921875 || UV0.y == 0.8671875) {
-                vec2 screenScale = ScreenSize / (ScreenSize.x * ProjMat[0][0] * 0.5);
-                float size = Position.y - round(screenScale.y * 0.5) - 62.5;
-                if (vertID == 0 || vertID == 3) { size += 96; pos.y -= 125; }
-                texCoord0.x = (corners[vertID].x + int(size / 9)) / 6;
-            }
-        
-
-
         }
         if(color.r == 7){ //base 320 - Beacon
 
