@@ -44,6 +44,8 @@ void main() {
         if(color.r != 0) pos.x = halfScreen.x+size[int(color.r)]*(corner.x-0.5);
         if(color.b == 1) pos.z += 200;
 
+        if(color.r == 6) pos.z -= 1; //dispenser bodge
+
     }
     if(color.a == 1 && round(255*Color.r) != 64.0) pos = vec3(0,0,0); // Remove if not in UI
     
