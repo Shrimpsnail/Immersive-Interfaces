@@ -2,7 +2,7 @@
 	"pack": {
 		"pack_format": 15,
 		"supported_formats": [15,100],
-		"description": "§7Complete GUI overhaul\n§9Github §8| By Shrimpsnail"
+		"description": "Complete GUI overhaul\n§9Github §8| By Shrimpsnail"
 	},
 	"language":{
 		"aa_dev":{
