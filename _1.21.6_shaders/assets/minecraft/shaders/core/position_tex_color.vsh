@@ -115,8 +115,8 @@ void main() {
         }   
         //================== OFFSETS ============================
         
-        //                       default    brewing stand    villager     beacon
-        vec2[] offsets = vec2[]( vec2(0,0) , vec2(-56,32) , vec2(1,48), vec2(1,25) );
+        //                       default    brewing stand    villager     beacon    creative
+        vec2[] offsets = vec2[]( vec2(0,0) , vec2(-56,32) , vec2(1,48), vec2(1,25), vec2(0,0) );
 
         pos.xy += offsets[int(color.g)];
 
@@ -176,6 +176,35 @@ void main() {
         if(color.g == 2){// VILLAGER
 
             if(color.b == 1) pos.y -= 30;
+        }
+
+        if(color.g == 3){//RECIPE BOOK
+
+            if(posCheckX(93,20)) pos.xy = vec2(0);
+            else{
+
+                if(color.r==1) pos.z += 2;
+
+                pos.xy += 21*2*(corner-0.5);
+
+            }
+
+            
+        }
+        if(color.g == 4){//CREATIVE MENU
+
+            if(color.r == 1) pos.xy += 14*2*(corner-0.5);    
+            if(color.b == 1) pos.z += 2;   
+        }
+        
+    }
+
+    if(color.a == 254){//Camouflage
+
+        if(color.xyz == vec3(51,89,155) || color.xyz == vec3(255)){//CREATIVE MENU
+
+            pos.xy += 14*2*(corner-0.5);    
+            pos.z += 2;   
         }
     }
 
