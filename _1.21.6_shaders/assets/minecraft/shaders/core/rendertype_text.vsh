@@ -42,22 +42,13 @@ void main() {
         int size[8] = int[](0,184,200,190,176,250,78,200);
 
         if(color.r != 0) pos.x = halfScreen.x+size[int(color.r)]*(corner.x-0.5);
-        if(color.b == 1) pos.z += 200;
-
-        if(color.r == 6) pos.z -= 1; //dispenser bodge
+        //if(color.b == 1) pos.z += 200;
 
     }
     if(color.a == 1 && round(255*Color.r) != 64.0) pos = vec3(0,0,0); // Remove if not in UI
     
-    //if(color.a != 1 && round(255*Color.r) == 64.0) pos.z -= 1;
-
-
     //remove the shadow
     if(color.a == 3 && Color.rgb != vec3(1)) pos = vec3(0,0,0);
-
-    //pushback
-    //if(color.a == 3 && Color.r == 1) pos.z -= 1;
-
 
     if(color.a == 2 && Color.rgba == vec4(1)){//non container uis 
 
@@ -82,11 +73,11 @@ void main() {
     }else if (color.a == 2) pos = vec3(0,0,0);
     
     //Push purple
-    if(Color.rgb == vec3(2.0/3.0,0,2.0/3.0)){
+    /*if(Color.rgb == vec3(2.0/3.0,0,2.0/3.0)){
 
         textColor = vec4(1);
         pos.z +=5;
-    }
+    }*/
 
     //===================================== Normal shader
     vertexColor = textColor * texelFetch(Sampler2, UV2 / 16, 0);

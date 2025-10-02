@@ -7,8 +7,8 @@
 
   "entity.minecraft.hopper_minecart": "Minecart with Hopper\uEc08\uEa08",
 
-  "container.dispenser": "\uEc09\uEa09",
-  "container.dropper": "\uEc10\uEa09",
+  "container.dispenser": "\uE998\uE998\uE998\uE998\uEc09\uEa09",
+  "container.dropper": "\uE998\uE998\uE998\uE998\uEc10\uEa09",
 
   "entity.minecraft.oak_chest_boat": "Oak Boat with Chest\uEc11\uEa11",
   "entity.minecraft.spruce_chest_boat": "Spruce Boat with Chest\uEc12\uEa11",
@@ -50,9 +50,6 @@
 
   "advMode.mode.conditional": "\uEc37\uEa14",
   "advMode.mode.unconditional": "\uEc38\uEa14",
-
-  "gui.done": "§5Done",
-  "gui.cancel": "§5Cancel",
 
   "itemGroup.buildingBlocks": "§fBuilding Blocks",
   "itemGroup.coloredBlocks": "§fColored Blocks",

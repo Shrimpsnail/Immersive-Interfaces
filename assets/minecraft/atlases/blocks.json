@@ -1,0 +1,9 @@
+{
+    "sources": [
+        {
+            "type": "single",
+            "resource": "block/missingno",
+            "sprite": "missingo"
+        }
+    ]
+}

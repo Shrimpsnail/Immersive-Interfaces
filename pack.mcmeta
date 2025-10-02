@@ -1,33 +1,45 @@
 {
-	"pack": {
-		"pack_format": 15,
-		"supported_formats": [15,100],
-		"description": "Complete GUI overhaul\n§9Github §8| By Shrimpsnail"
-	},
+    "pack": {
+		"description": "Complete GUI overhaul\n§9Github §8| By Shrimpsnail",
+
+        "pack_format": 15, 
+        "supported_formats": [15, 69], 
+
+        "min_format": 15, 
+        "max_format": 69
+    },
+    "overlays": {
+        "entries": [
+            {
+				"directory": "_1.21_lang",
+                "formats": [18, 100], 
+                "min_format": 18, 
+                "max_format": 100
+            },
+			{
+				"directory": "_1.20.2_shaders",
+                "formats": [42, 56], 
+                "min_format": 42, 
+                "max_format": 56
+            },
+			{
+				"directory": "_1.21.1_shader_fix",
+                "formats": [34, 41], 
+                "min_format": 34, 
+                "max_format": 41
+            },
+			{
+				"directory": "_1.21.6_shaders",
+                "formats": [57, 100], 
+                "min_format": 57, 
+                "max_format": 100
+            }
+        ]
+    },
 	"language":{
 		"aa_dev":{
 			"name":"Developer§a",
 			"region":"Immersive Interfaces"
 		}
-	},
-	"overlays": {
-		"entries": [
-			{
-				"directory": "_1.21_lang",
-				"formats": [18,100]
-      		},
-			{
-				"directory": "_1.20.2_shaders",
-				"formats": [42,56]
-			},
-			{
-				"directory": "_1.21.1_shader_fix",
-				"formats": [34,41]
-			},
-			{
-				"directory": "_1.21.6_shaders",
-				"formats": [57,100]
-			}
-		]
-  	}
+	}
 }

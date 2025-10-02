@@ -18,7 +18,7 @@ out vec4 vertexColor;// 1.21
 
 vec2[] corners = vec2[](vec2(0, 0), vec2(0, 1), vec2(1, 1), vec2(1, 0));
 vec2 screen = 2 / vec2(ProjMat[0][0], -ProjMat[1][1]);
-float margin = 1;
+float margin = 0;
 
 bool posCheckX(float offset,float size) {
     return ( abs( (round(screen.x/2)+offset+(size*corners[gl_VertexID % 4].x)) - Position.x )<= margin );
@@ -142,6 +142,7 @@ void main() {
 
 
     }
+
     //≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
     //≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 
@@ -183,7 +184,7 @@ void main() {
             if(posCheckX(93,20)) pos.xy = vec2(0);
             else{
 
-                if(color.r==1) pos.z += 2;
+                //if red 1 push forward (removed)
 
                 pos.xy += 21*2*(corner-0.5);
 
@@ -194,18 +195,25 @@ void main() {
         if(color.g == 4){//CREATIVE MENU
 
             if(color.r == 1) pos.xy += 14*2*(corner-0.5);    
-            if(color.b == 1) pos.z += 2;   
+            //if blue 1 push forward (removed) 
+            
         }
         
     }
 
     if(color.a == 254){//Camouflage
 
-        if(color.xyz == vec3(51,89,155) || color.xyz == vec3(255)){//CREATIVE MENU
+        if(color.xyz == vec3(51,89,155) || color.xyz == vec3(29,56,130) || color.xyz == vec3(93,119,198)){//CREATIVE MENU
 
-            pos.xy += 14*2*(corner-0.5);    
-            pos.z += 2;   
+            pos.xy += 14*2*(corner-0.5);      
+            //if blue 1 push forward (removed) 
         }
+    }
+
+    if(color == vec4(0)){
+        
+         if(  (posCheck(vec2( 49, 71),16)) || (posCheck(vec2( 76, 71),16)) || (posCheck(vec2( 49, -87),16)) || (posCheck(vec2( 76, -87),16)) ) pos.xy = vec2(0,0);
+
     }
 
     gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
