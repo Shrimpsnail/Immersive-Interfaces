@@ -6,6 +6,7 @@
             "\uE999": -1,
             "\uE998": -7,
 
+            "\uEa00": 200,
 
             "\uEa01": -184,
             "\uEa02": -190,
@@ -22,11 +23,15 @@
             "\uEa21": 24,
             
             "\uEa40": -25,
-            "\uEa41": -34
+
+            "\uEa41": -98,
+            "\uEa42": -98
 
         }
     },
 
+	{"type": "bitmap","height":  128, "ascent": -100,"chars": ["\uEC00"],
+     "file": "minecraft:gui/interfaces/ghost.png"},
 
     
 	{"type": "bitmap","height":  91, "ascent": 23,"chars": ["\uEC01"],
@@ -158,11 +163,15 @@
     {"type": "bitmap","height": 22, "ascent": 14,"chars": ["\uEc39"],
         "file": "minecraft:gui/interfaces/comm_redstone.png"},
 
+    {"type": "bitmap","height": 36, "ascent": -17,"chars": ["\uEc40"],
+        "file": "minecraft:gui/interfaces/trust_itworks.png"},
+        
 
-    {"type": "bitmap","height": 7, "ascent": 7,"chars": ["\uEc40"],
-        "file": "minecraft:gui/interfaces/done_text.png"},
-    {"type": "bitmap","height": 7, "ascent": 7,"chars": ["\uEc41"],
-        "file": "minecraft:gui/interfaces/cancel_text.png"},
+    {"type": "bitmap","height": 37, "ascent": -1,"chars": ["\uEc41"],
+        "file": "minecraft:gui/interfaces/door_blast_furnace.png"},
+
+    {"type": "bitmap","height": 37, "ascent": -1,"chars": ["\uEc42"],
+        "file": "minecraft:gui/interfaces/door_smoker.png"},
 
 
     {"type": "bitmap",

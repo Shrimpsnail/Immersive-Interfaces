@@ -8,6 +8,11 @@
         "min_format": 15, 
         "max_format": 69
     },
+    "immediatelyfast": {
+        "incompatible_features": [
+            "font_atlas_resizing"
+        ]
+    },
     "overlays": {
         "entries": [
             {
