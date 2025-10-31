@@ -15,6 +15,7 @@ uniform mat4 ModelViewMat;
 uniform mat3 IViewRotMat;
 uniform mat4 ProjMat;
 uniform int FogShape;
+uniform float GameTime;
 //uniform vec2 ScreenSize;
 
 out float vertexDistance;
@@ -29,7 +30,7 @@ void main() {
 
     vertexColor = data.color * texelFetch(Sampler2, UV2 / 16, 0);
     gl_Position = ProjMat * ModelViewMat * vec4(data.position, 1.0);
-    texCoord0 = UV0;
+    texCoord0 = data.uv0;
 
     vertexDistance = fog_distance(Position, FogShape);
 

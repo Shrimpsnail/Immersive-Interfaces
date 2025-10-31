@@ -13,6 +13,7 @@ uniform sampler2D Sampler0;
 
 uniform mat4 ModelViewMat;
 uniform mat4 ProjMat;
+uniform float GameTime;
 uniform int FogShape;
 //uniform vec2 ScreenSize;
 
@@ -29,7 +30,7 @@ void main() {
     vertexColor = data.color * texelFetch(Sampler2, UV2 / 16, 0);
     gl_Position = ProjMat * ModelViewMat * vec4(data.position, 1.0);
     vertexDistance = fog_distance(Position, FogShape);
-    texCoord0 = UV0;
+    texCoord0 = data.uv0;
 
 }
     //Still don't know if i've fixed this yet

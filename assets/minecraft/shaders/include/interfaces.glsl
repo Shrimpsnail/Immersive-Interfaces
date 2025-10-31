@@ -172,12 +172,15 @@ Data interfaces(mat4 ProjMat, float GameTime, sampler2D Sampler0, vec3 Position,
                    (posCheckX(Position,screen,-48,18)) ||
                    (posCheckX(Position,screen,-36,18)) || 
                    (posCheckX(Position,screen, 31,18))) pos = vec3(0,0,0);
-                if (posCheckX(Position,screen,55,18)) texCoord0.x += 18.0/textureSize(Sampler0,0).x;
+                if (posCheckX(Position,screen,55,18)) {
+                    texCoord0.x += 18.0/textureSize(Sampler0,0).x;
+                }
             }
 
             if(color.b == 2){ // Beacon buttons
 
                 pos.xy += ((corner-0.5)*2*3);
+                
                 texCoord0 -= corner*(56.0/textureSize(Sampler0,0));      // speed (default)
 
                  if(posCheck(Position,screen,vec2(-38,-88),22)) texCoord0 += vec2(28, 0)/textureSize(Sampler0,0); // haste
@@ -189,7 +192,25 @@ Data interfaces(mat4 ProjMat, float GameTime, sampler2D Sampler0, vec3 Position,
             else if(posCheck(Position,screen,vec2( 53,-63),22)) texCoord0 += vec2(56,28)/textureSize(Sampler0,0); // beacon on
             else if(posCheck(Position,screen,vec2( 75, -3),22)) pos.xy = vec2(0,0);                               // cross button
 
-                pos.z += 400;
+            }
+
+            if(color.b == 3){ // Beacon buttons [1.20.1]
+
+                pos.xy += ((corner-0.5)*2*3);
+
+                texCoord0 = vec2(  ((84*corner.x)+428)/512  ,     ((color.r*84)+(84*corner.y))/512    );
+                
+                texCoord0 -= corner*(56.0/textureSize(Sampler0,0));      // speed (default)
+
+                 if(posCheck(Position,screen,vec2(-38,-88),22)) texCoord0 += vec2(28, 0)/512; // haste
+            else if(posCheck(Position,screen,vec2(-62,-63),22)) texCoord0 += vec2( 0,28)/512; // resistance
+            else if(posCheck(Position,screen,vec2(-38,-63),22)) texCoord0 += vec2(28,28)/512; // jump boost
+            else if(posCheck(Position,screen,vec2(-50,-38),22)) texCoord0 += vec2( 0,56)/512; // strength
+            else if(posCheck(Position,screen,vec2( 29,-63),22)) texCoord0 += vec2(56, 0)/512; // regen
+            else if(posCheck(Position,screen,vec2( 49, -3),22)) texCoord0 += vec2(28,56)/512; // tier 2
+            else if(posCheck(Position,screen,vec2( 53,-63),22)) texCoord0 += vec2(56,28)/512; // beacon on
+            else if(posCheck(Position,screen,vec2( 75, -3),22)) pos.xy = vec2(0,0);           // cross button
+
             }
         }
 
@@ -200,15 +221,20 @@ Data interfaces(mat4 ProjMat, float GameTime, sampler2D Sampler0, vec3 Position,
 
         if(color.g == 3){//RECIPE BOOK
 
+            if(color.b == 1)texCoord0 = vec2(  ((62*corner.x)+20)/256  ,    (180*corner.y)/256    );
+            if(color.b == 2)texCoord0 = vec2(  ((62*corner.x)+82)/256  ,    (180*corner.y)/256    );
+
             if(posCheckX(Position,screen,93,20)) return null;
             if(posCheckX(Position,screen, 9,20)) return null;
+            if(posCheckX(Position,screen,-6,20)) return null;
             else{
 
                 pos.xy += 21*2*(corner-0.5);
 
-                texCoord0.y -= 60.0/textureSize(Sampler0,0).y*corner.y;
+                texCoord0.y -= 120.0/textureSize(Sampler0,0).y*corner.y;
 
                 if(posCheck(Position,screen,vec2( -68, -49),vec2(20,18))) texCoord0.y += 60.0/textureSize(Sampler0,0).y;
+                if(posCheck(Position,screen,vec2( -83, -49),vec2(20,18))) texCoord0.y += 120.0/textureSize(Sampler0,0).y;
 
             }
 
@@ -216,15 +242,16 @@ Data interfaces(mat4 ProjMat, float GameTime, sampler2D Sampler0, vec3 Position,
         }
         if(color.g == 4){//CREATIVE MENU
 
-            if(color.r == 1) pos.xy += 14*2*(corner-0.5);    
+            if(color.r == 1) pos.xy += vec2(13,16)*2*(corner-0.5);    
             if(color.b == 1) pos.z += 400;                    // ONLY FOR PRE 1.21.9
             
         }
 
         if(color.g == 5){//HORSE
+
             if(color.r == 1){
-                pos.xy += (vec2(2,10)*2*(corner-0.5) ) - 2 + vec2(color.b*18,0); 
-                texCoord0 += vec2((color.b*18)/textureSize(Sampler0,0).x,0);
+                pos.xy += (vec2(90,54)*(corner-0.5) ) - 2 + vec2(color.b*18,0); 
+                texCoord0 += vec2((color.b*18*2)/textureSize(Sampler0,0).x,0);
             }
             if(color.r == 2){
                             
@@ -243,7 +270,7 @@ Data interfaces(mat4 ProjMat, float GameTime, sampler2D Sampler0, vec3 Position,
 
         if(color.xyz == vec3(51,89,155) || color.xyz == vec3(29,56,130) || color.xyz == vec3(93,119,198)){//CREATIVE MENU
 
-            pos.xy += 14*2*(corner-0.5);      
+            pos.xy += vec2(13,16)*2*(corner-0.5);      
             pos.z += 400;                    // ONLY FOR PRE 1.21.9
         }
         return Data(pos,texCoord0,vec4(0));
@@ -252,6 +279,20 @@ Data interfaces(mat4 ProjMat, float GameTime, sampler2D Sampler0, vec3 Position,
     //fallback
     return Data(pos,texCoord0,vec4(0));
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Data interfaces_text(mat4 ProjMat, float GameTime, sampler2D Sampler0, vec3 Position, vec2 texCoord0,vec4 Color) {
     
@@ -264,7 +305,9 @@ Data interfaces_text(mat4 ProjMat, float GameTime, sampler2D Sampler0, vec3 Posi
     vec4 color = round(texture(Sampler0, texCoord0-(0.001*corner))*255);
     ivec2 halfScreen = ivec2(0.49+((2 / vec2(ProjMat[0][0], -ProjMat[1][1]))/2));
 
-    
+    if(color.a == 0 || color.a== 255) return Data(pos,texCoord0,textColor); 
+
+
     if(color.a == 1){//ui containers
         textColor = vec4(1);
 
@@ -273,11 +316,38 @@ Data interfaces_text(mat4 ProjMat, float GameTime, sampler2D Sampler0, vec3 Posi
         if(color.r != 0) pos.x = halfScreen.x+size[int(color.r)]*(corner.x-0.5);
         //if(color.b == 1) pos.z += 200;
 
+
+        if(color.g == 1){// Villager
+
+            textColor = vec4(1);
+
+            int  v_frames = 8;
+            float  v_frametime = 5.0 * v_frames;
+            int  v_width = 2;
+            int  v_height= 4;
+
+            texCoord0 -= vec2(64.0,192.0)/textureSize(Sampler0,0)*corner;
+            pos.x += (corner.x-0.5)*32;
+
+                 if(mod((GameTime*24000),v_frametime) <   v_frametime/4) texCoord0.y += 0;
+            else if(mod((GameTime*24000),v_frametime) < 2*v_frametime/4) texCoord0.y += 1*64.0/textureSize(Sampler0,0).y;
+            else if(mod((GameTime*24000),v_frametime) < 3*v_frametime/4) texCoord0.y += 2*64.0/textureSize(Sampler0,0).y;
+            else if(mod((GameTime*24000),v_frametime) < 4*v_frametime/4) texCoord0.y += 3*64.0/textureSize(Sampler0,0).y;
+
+                 if(mod((GameTime*24000),v_frametime/v_height) <   v_frametime/8) texCoord0.x += 0;
+            else if(mod((GameTime*24000),v_frametime/v_height) < 2*v_frametime/8) texCoord0.x += 64.0/textureSize(Sampler0,0).x;
+        }
     }
-    if(color.a == 1 && round(255*Color.r) != 64.0) pos = vec3(0,0,0); // Remove if not in UI
+    if(color.a == 1 && round(255*Color.r) != 64.0) return null; // Remove if not in UI
     
-    //remove the shadow (beacon)
-    if(color.a == 3 && Color.rgb != vec3(1)) pos = vec3(0,0,0);
+
+    if(color.a == 3)  { // Curtains
+
+        if(Color.rgb != vec3(1)) return null;
+
+        if(color.r == 2) pos.z+=300;
+    
+    }
 
     if(color.a == 2 && Color.rgba == vec4(1)){//non container uis 
 
@@ -297,9 +367,10 @@ Data interfaces_text(mat4 ProjMat, float GameTime, sampler2D Sampler0, vec3 Posi
 
         }
 
-    }else if (color.a == 2) pos = vec3(0,0,0);
+    }else if (color.a == 2) return null;
 
-    return Data(pos,vec2(0),textColor);
+
+    return Data(pos,texCoord0,textColor);
 
 
 }

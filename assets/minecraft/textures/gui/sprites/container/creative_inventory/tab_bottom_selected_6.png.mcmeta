@@ -1,7 +1,7 @@
 {
   "animation": {
-    "width": 54,
-    "height": 60,
+    "width": 52,
+    "height": 64,
     "interpolate": true,
     "frametime": 10
   }

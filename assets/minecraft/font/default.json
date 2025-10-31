@@ -25,7 +25,10 @@
             "\uEa40": -25,
 
             "\uEa41": -98,
-            "\uEa42": -98
+            "\uEa42": -98,
+
+
+            "\uEb01": 86
 
         }
     },
@@ -176,28 +179,11 @@
 
     {"type": "bitmap",
         "file": "minecraft:gui/interfaces/trades.png",
-        "height": 140, "ascent": -5,
+        "height": 142, "ascent": -4,
         "chars": ["\uEe00"]
     },
 
-    {"type": "bitmap",
-        "file": "minecraft:gui/interfaces/villagers/base_trades.png",
-        "height": 166, "ascent": 13,
-        "chars": ["\uEe01"]
-    },{"type": "bitmap",
-        "file": "minecraft:gui/interfaces/villagers/base_counter.png",
-        "height": 166, "ascent": 13,
-        "chars": ["\uEe02"]
-    },
-
-    {"type": "bitmap",
-        "file": "minecraft:gui/interfaces/villagers/libr_trades.png",
-        "height": 167, "ascent": 14,
-        "chars": ["\uEe03"]
-    },{"type": "bitmap",
-        "file": "minecraft:gui/interfaces/villagers/libr_counter.png",
-        "height": 167, "ascent": 14,
-        "chars": ["\uEe04"]
-    }
+    {"type": "bitmap","height": 64, "ascent": 17,"chars": ["\uEe01"],
+        "file": "minecraft:gui/interfaces/villager/shopkeeper.png"}
     ]
 }

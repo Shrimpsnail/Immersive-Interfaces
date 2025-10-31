@@ -34,6 +34,19 @@
                 "max_format": 41
             },
 			{
+				"directory": "_1.21.2-.4_json_fix",
+                "formats": [42, 46], 
+                "min_format": 42, 
+                "max_format": 46
+            },
+            {
+				"directory": "_1.21.5_shader_fix",
+                "formats": [54, 56], 
+                "min_format": 54, 
+                "max_format": 56
+            },
+
+			{
 				"directory": "_1.21.6_shaders",
                 "formats": [57, 100], 
                 "min_format": 57, 

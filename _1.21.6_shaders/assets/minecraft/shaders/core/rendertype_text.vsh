@@ -30,5 +30,5 @@ void main() {
     sphericalVertexDistance = fog_spherical_distance(Position);
     cylindricalVertexDistance = fog_cylindrical_distance(Position);
     
-    texCoord0 = UV0;
+    texCoord0 = data.uv0;
 }
