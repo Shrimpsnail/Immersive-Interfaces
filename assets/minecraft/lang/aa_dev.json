@@ -37,7 +37,7 @@
   "container.cartography_table": "",
   "container.enchant": "",
 
-  "advMode.command": "\uEa00\uEa00\uEC00",
+  "advMode.command": "",
   "advMode.setCommand": "",
   "advMode.previousOutput": "§9~/§bPrevious Output.bat",
 
@@ -71,7 +71,5 @@
   "block.minecraft.beacon.primary": "§f\uEa21\uEc21",
   "block.minecraft.beacon.secondary": "",
 
-  "merchant.trades": "§f\uE998\uEe00",
-
-  "merchant.title": "\uEb01\uEe01"
+  "merchant.trades": "§f\uE998\uEe00"
 }
