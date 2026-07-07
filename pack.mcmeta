@@ -1,17 +1,28 @@
 {
     "pack": {
-		"description": "Complete GUI overhaul\n§9Github §8| By Shrimpsnail",
+		"description_old": "Complete GUI overhaul\n§9Github §8| By Shrimpsnail",
+
+        "description": [
+        "",
+        { 
+            "color": "#73767c", 
+            "text": "Complete GUI overhaul\n" 
+        },
+        {
+            "text": "Github",
+            "color": "#9032AD"
+        },
+        {
+            "text": " | by Shrimpsnail",
+            "color": "#5a5d66"
+        }
+        ],
 
         "pack_format": 15, 
-        "supported_formats": [15, 69], 
+        "supported_formats": [15, 999], 
 
         "min_format": 15, 
-        "max_format": 69
-    },
-    "immediatelyfast": {
-        "incompatible_features": [
-            "font_atlas_resizing"
-        ]
+        "max_format": 999
     },
     "overlays": {
         "entries": [
@@ -45,12 +56,23 @@
                 "min_format": 54, 
                 "max_format": 56
             },
-
 			{
 				"directory": "_1.21.6_shaders",
-                "formats": [57, 100], 
+                "formats": [57, 200], 
                 "min_format": 57, 
-                "max_format": 100
+                "max_format": 200
+            },
+			{
+				"directory": "_26.1_shaders",
+                "formats": [84, 200], 
+                "min_format": 84, 
+                "max_format": 200
+            },
+			{
+				"directory": "_26.2_shaders",
+                "formats": [88, 200], 
+                "min_format": 88, 
+                "max_format": 200
             }
         ]
     },

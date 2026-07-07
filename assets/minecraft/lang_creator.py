@@ -28,15 +28,19 @@ def Main():
     
     replacers={
 
-    "container.dispenser":	"\uEc09\uEa09",
-    "container.dropper":	"\uEc10\uEa09",
+    "container.dispenser": "\uE998\uE998\uE998\uE998\uEc09\uEa09",
+    "container.dropper": "\uE998\uE998\uE998\uE998\uEc10\uEa09",
+
+    "container.smoker": "\uEa42\uEc42",
+    "container.blast_furnace": "\uEa41\uEc41",
 
 	"container.crafting": 	"", "container.crafter": 		    "", "container.inventory": 	        "",
-    "container.furnace": 	"", "container.smoker": 			"", "container.blast_furnace": 	    "",
+    "container.furnace": 	"",
     "container.repair": 	"", "container.upgrade": 			"", "container.brewing": 		    "",
     "container.loom": 		"", "container.hopper":				"", "container.grindstone_title":   "",
     "container.stonecutter":"", "container.cartography_table":	"", "container.enchant":		    "",
     
+
 	"block.minecraft.beacon.primary": "§f\uEa21\uEc21",
 	"block.minecraft.beacon.secondary": "",
 
@@ -44,13 +48,13 @@ def Main():
 
 	"advMode.command": "",
 	"advMode.setCommand": "",
-    
-	"advMode.mode.redstone": 	"\uEc23\uEc24\uEc25\uEc26\uEa11\uEa11\uEa11\uEa11",
-	"advMode.mode.sequence":	"\uEc27\uEc28\uEc29\uEc30\uEa11\uEa11\uEa11\uEa11",
-	"advMode.mode.auto": 		"\uEc31\uEc32\uEc33\uEc34\uEa11\uEa11\uEa11\uEa11",
+        
+    "advMode.mode.redstone": "\uEa12\uEa12\uEa12\uEa12\uEa12\uEa12\uEa12\uEa12 \uEc23\uEc24\uEc25\uEc26\uEa11\uEa11\uEa11\uEa11",
+    "advMode.mode.sequence": "\uEa12\uEa12\uEa12\uEa12\uEa12\uEa12\uEa12\uEa12 \uEc27\uEc28\uEc29\uEc30\uEa11\uEa11\uEa11\uEa11",
+    "advMode.mode.auto":     "\uEa12\uEa12\uEa12\uEa12\uEa12\uEa12\uEa12\uEa12 \uEc31\uEc32\uEc33\uEc34\uEa11\uEa11\uEa11\uEa11",
 
-	"advMode.mode.autoexec.bat": "\uEc36\uEa14\uEc35\uEa13",
-	"advMode.mode.redstoneTriggered": "\uEc39\uEa14",
+    "advMode.mode.autoexec.bat": "\uEc36\uEa08\uEa14\uEa05\uEc35\uEa00\uEa13\uEa00",
+    "advMode.mode.redstoneTriggered": "\uEc39\uEa08\uEa14\uEa05\uEc40\uEa00\uEa13\uEa00",
 
 	"advMode.mode.conditional": "\uEc37\uEa14",
 	"advMode.mode.unconditional": "\uEc38\uEa14",
@@ -64,10 +68,24 @@ def Main():
     prefixes ={
     
 	"advMode.previousOutput": "§9~/§b",
-    
-	"gui.done": "§5",
-	"gui.cancel": "§5"
 
+
+    "itemGroup.buildingBlocks": "§f",
+    "itemGroup.coloredBlocks":  "§f",
+    "itemGroup.combat":         "§f",
+    "itemGroup.consumables":    "§f",
+    "itemGroup.crafting":       "§f",
+    "itemGroup.foodAndDrink":   "§f",
+    "itemGroup.functional":     "§f",
+    "itemGroup.hotbar":         "§f",
+    "itemGroup.ingredients":    "§f",
+    "itemGroup.inventory":      "§f",
+    "itemGroup.natural":        "§f",
+    "itemGroup.op":             "§f",
+    "itemGroup.redstone":       "§f",
+    "itemGroup.search":         "§f",
+    "itemGroup.spawnEggs":      "§f",
+    "itemGroup.tools":          "§f"
 
     }
 
@@ -100,7 +118,7 @@ def Main():
 
             for key in  suffixes.keys(): newLang[key] = langFile.get(key)+suffixes.get(key)
             for key in replacers.keys(): newLang[key] = replacers.get(key)
-            #for key in  prefixes.keys(): newLang[key] = prefixes.get(key)+langFile.get(key)
+            for key in  prefixes.keys(): newLang[key] = prefixes.get(key)+langFile.get(key)
 
             with open(program_folder+"/lang/"+langName, 'w', encoding='utf-8') as newLangFile:
                 json.dump(newLang,newLangFile,indent=4)

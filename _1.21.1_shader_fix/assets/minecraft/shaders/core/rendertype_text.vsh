@@ -16,7 +16,6 @@ uniform mat3 IViewRotMat;
 uniform mat4 ProjMat;
 uniform int FogShape;
 uniform float GameTime;
-//uniform vec2 ScreenSize;
 
 out float vertexDistance;
 out vec4 vertexColor;
