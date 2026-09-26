@@ -1,12 +1,4 @@
-#version 330
 
-#extension GL_ARB_shader_draw_parameters : enable
-#extension SPV_KHR_shader_draw_parameters : enable
-
-//#moj_import <fog.glsl>
-//#moj_import <dynamictransforms.glsl>
-//#moj_import <globals.glsl>
-//#moj_import <projection.glsl>
 
 struct Data 
 {
@@ -21,17 +13,15 @@ float margin = 0;
 
 Data null = Data(vec3(0),vec2(0),vec4(0));
 
-
-
 bool posCheckX(vec3 position,vec2 screen, float offset,float size) {
-    return ( abs( (round(screen.x/2)+offset+(size*corners[gl_VertexID % 4].x)) - position.x )<= margin );
+    return ( abs( (round(screen.x/2)+offset+(size*corners[(gl_VertexIndex) % 4].x)) - position.x )<= margin );
 }
 bool posChecky(vec3 position,vec2 screen, float offset,float size) {
-    return ( abs( (round(screen.y/2)+offset+(size*corners[gl_VertexID % 4].y)) - position.y )<= margin );
+    return ( abs( (round(screen.y/2)+offset+(size*corners[(gl_VertexIndex) % 4].y)) - position.y )<= margin );
 }
 bool posCheck(vec3 position,vec2 screen, vec2 offset,vec2 size) {
-    return ( abs( (round(screen.x/2)+offset.x+(size.x*corners[gl_VertexID % 4].x)) - position.x )<= margin )&&
-           ( abs( (round(screen.y/2)+offset.y+(size.y*corners[gl_VertexID % 4].y)) - position.y )<= margin );
+    return ( abs( (round(screen.x/2)+offset.x+(size.x*corners[(gl_VertexIndex) % 4].x)) - position.x )<= margin )&&
+           ( abs( (round(screen.y/2)+offset.y+(size.y*corners[(gl_VertexIndex) % 4].y)) - position.y )<= margin );
 }
 bool posCheck(vec3 position,vec2 screen, vec2 offset,float size) {
     return posCheck(position,screen, offset,vec2(size));
@@ -41,11 +31,15 @@ bool posCheck(vec3 position,vec2 screen, vec2 offset,float size) {
 
 
 
+
+
 Data interfaces(mat4 ProjMat, float GameTime, sampler2D Sampler0, vec3 Position, vec2 texCoord0) {
 
 
     vec3 pos = Position;
-    int vertID = (gl_VertexID - gl_BaseVertexARB) % 4;
+
+    int vertID = (gl_VertexIndex) % 4;
+
 
     vec2 corner = corners[vertID];
     vec4 color = round(texture(Sampler0, texCoord0-(0.00001*corner))*255);
@@ -53,10 +47,14 @@ Data interfaces(mat4 ProjMat, float GameTime, sampler2D Sampler0, vec3 Position,
     //ivec2 halfScreen = ivec2(0.49+(ScreenSize/uiScale/2));
     vec2 screen = 2 / vec2(ProjMat[0][0], -ProjMat[1][1]);
 
+
+
+    //Defaults
+
     if(color.a == 255) return Data(Position,texCoord0,vec4(0));
 
 
-    if(color == vec4(0)){//affects items and entities and ends checks 
+    if(color == vec4(0)){
         
         if(  (posCheck(Position,screen,vec2( 49, 71),16))  ||
               (posCheck(Position,screen,vec2( 76, 71),16))  || 
@@ -67,7 +65,6 @@ Data interfaces(mat4 ProjMat, float GameTime, sampler2D Sampler0, vec3 Position,
         if(posCheck(Position,screen,vec2( -62, -65),52)) pos.xy +=  5*corner - vec2(0,3);
 
         return Data(pos,texCoord0,vec4(0));
-
     }
 
 
@@ -339,8 +336,12 @@ Data interfaces_text(mat4 ProjMat, float GameTime, sampler2D Sampler0, vec3 Posi
 
     vec4 textColor = Color;
 
-    
-    int vertID = (gl_VertexID - gl_BaseVertexARB) % 4;
+    #ifndef VULKAN
+    int vertID = (gl_VertexIndex - 0) % 4;
+    #else
+    int vertID = gl_VertexIndex % 4;
+    #endif
+
     vec2 corner = corners[vertID];
     vec4 color = round(texture(Sampler0, texCoord0-(0.001*corner))*255);
     ivec2 halfScreen = ivec2(0.49+((2 / vec2(ProjMat[0][0], -ProjMat[1][1]))/2));

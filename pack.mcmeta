@@ -58,20 +58,26 @@
             },
 			{
 				"directory": "_1.21.6_shaders",
-                "formats": [57, 200], 
+                "formats": [57, 96], 
                 "min_format": 57, 
-                "max_format": 200
+                "max_format": 96
             },
 			{
 				"directory": "_26.1_shaders",
-                "formats": [84, 200], 
+                "formats": [84, 96], 
                 "min_format": 84, 
-                "max_format": 200
+                "max_format": 96
             },
 			{
 				"directory": "_26.2_shaders",
-                "formats": [88, 200], 
+                "formats": [88, 96], 
                 "min_format": 88, 
+                "max_format": 96
+            },
+			{
+				"directory": "_26.3_shaders",
+                "formats": [97, 200], 
+                "min_format": 97, 
                 "max_format": 200
             }
         ]
