@@ -14,14 +14,14 @@ float margin = 0;
 Data null = Data(vec3(0),vec2(0),vec4(0));
 
 bool posCheckX(vec3 position,vec2 screen, float offset,float size) {
-    return ( abs( (round(screen.x/2)+offset+(size*corners[(gl_VertexIndex) % 4].x)) - position.x )<= margin );
+    return ( abs( (round(screen.x/2)+offset+(size*corners[(gl_VertexIndex - gl_BaseVertex ) % 4].x)) - position.x )<= margin );
 }
 bool posChecky(vec3 position,vec2 screen, float offset,float size) {
-    return ( abs( (round(screen.y/2)+offset+(size*corners[(gl_VertexIndex) % 4].y)) - position.y )<= margin );
+    return ( abs( (round(screen.y/2)+offset+(size*corners[(gl_VertexIndex - gl_BaseVertex ) % 4].y)) - position.y )<= margin );
 }
 bool posCheck(vec3 position,vec2 screen, vec2 offset,vec2 size) {
-    return ( abs( (round(screen.x/2)+offset.x+(size.x*corners[(gl_VertexIndex) % 4].x)) - position.x )<= margin )&&
-           ( abs( (round(screen.y/2)+offset.y+(size.y*corners[(gl_VertexIndex) % 4].y)) - position.y )<= margin );
+    return ( abs( (round(screen.x/2)+offset.x+(size.x*corners[(gl_VertexIndex - gl_BaseVertex ) % 4].x)) - position.x )<= margin )&&
+           ( abs( (round(screen.y/2)+offset.y+(size.y*corners[(gl_VertexIndex - gl_BaseVertex ) % 4].y)) - position.y )<= margin );
 }
 bool posCheck(vec3 position,vec2 screen, vec2 offset,float size) {
     return posCheck(position,screen, offset,vec2(size));
@@ -35,16 +35,18 @@ bool posCheck(vec3 position,vec2 screen, vec2 offset,float size) {
 
 Data interfaces(mat4 ProjMat, float GameTime, sampler2D Sampler0, vec3 Position, vec2 texCoord0) {
 
-
     vec3 pos = Position;
 
-    int vertID = (gl_VertexIndex) % 4;
+    //vec4 color = round(texture(Sampler0, texCoord0)*255);
 
-
+    //int vertID = int(mod(color.g,4));
+    int vertID = (gl_VertexIndex - gl_BaseVertex ) % 4;
+    
     vec2 corner = corners[vertID];
+
     vec4 color = round(texture(Sampler0, texCoord0-(0.00001*corner))*255);
 
-    //ivec2 halfScreen = ivec2(0.49+(ScreenSize/uiScale/2));
+
     vec2 screen = 2 / vec2(ProjMat[0][0], -ProjMat[1][1]);
 
 
@@ -336,11 +338,7 @@ Data interfaces_text(mat4 ProjMat, float GameTime, sampler2D Sampler0, vec3 Posi
 
     vec4 textColor = Color;
 
-    #ifndef VULKAN
-    int vertID = (gl_VertexIndex - 0) % 4;
-    #else
-    int vertID = gl_VertexIndex % 4;
-    #endif
+    int vertID = (gl_VertexIndex - gl_BaseVertex ) % 4;
 
     vec2 corner = corners[vertID];
     vec4 color = round(texture(Sampler0, texCoord0-(0.001*corner))*255);
