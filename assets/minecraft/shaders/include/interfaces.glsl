@@ -297,6 +297,11 @@ Data interfaces(mat4 ProjMat, float GameTime, sampler2D Sampler0, vec3 Position,
                 pos.xy += vec2(1,0)+(corner-vec2(0.5))*vec2(182,48);
 
             }
+            if(color.r == 4){
+
+                pos.xy += (corner-vec2(0.5))*vec2(182,48);
+
+            }
 
         }
 
