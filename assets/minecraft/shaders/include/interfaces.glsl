@@ -14,14 +14,14 @@ float margin = 0;
 Data null = Data(vec3(0),vec2(0),vec4(0));
 
 bool posCheckX(vec3 position,vec2 screen, float offset,float size) {
-    return ( abs( (round(screen.x/2)+offset+(size*corners[(gl_VertexIndex - gl_BaseVertex ) % 4].x)) - position.x )<= margin );
+    return ( abs( (floor(screen.x/2+0.49)+offset+(size*corners[(gl_VertexIndex - gl_BaseVertex ) % 4].x)) - position.x )<= margin );
 }
 bool posChecky(vec3 position,vec2 screen, float offset,float size) {
-    return ( abs( (round(screen.y/2)+offset+(size*corners[(gl_VertexIndex - gl_BaseVertex ) % 4].y)) - position.y )<= margin );
+    return ( abs( (floor(screen.y/2+0.49)+offset+(size*corners[(gl_VertexIndex - gl_BaseVertex ) % 4].y)) - position.y )<= margin+0.5 );
 }
 bool posCheck(vec3 position,vec2 screen, vec2 offset,vec2 size) {
-    return ( abs( (round(screen.x/2)+offset.x+(size.x*corners[(gl_VertexIndex - gl_BaseVertex ) % 4].x)) - position.x )<= margin )&&
-           ( abs( (round(screen.y/2)+offset.y+(size.y*corners[(gl_VertexIndex - gl_BaseVertex ) % 4].y)) - position.y )<= margin );
+    return ( abs( (floor(screen.x/2+0.49)+offset.x+(size.x*corners[(gl_VertexIndex - gl_BaseVertex ) % 4].x)) - position.x )<= margin )&&
+           ( abs( (floor(screen.y/2+0.49)+offset.y+(size.y*corners[(gl_VertexIndex - gl_BaseVertex ) % 4].y)) - position.y )<= margin );
 }
 bool posCheck(vec3 position,vec2 screen, vec2 offset,float size) {
     return posCheck(position,screen, offset,vec2(size));
