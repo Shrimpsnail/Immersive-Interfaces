@@ -10,6 +10,7 @@
   "container.dispenser": "\uE998\uE998\uE998\uE998\uEc09\uEa09",
   "container.dropper": "\uE998\uE998\uE998\uE998\uEc10\uEa09",
 
+  "entity.minecraft.chest_boat": "Oak Boat with Chest\uEc11\uEa11",
   "entity.minecraft.oak_chest_boat": "Oak Boat with Chest\uEc11\uEa11",
   "entity.minecraft.spruce_chest_boat": "Spruce Boat with Chest\uEc12\uEa11",
   "entity.minecraft.birch_chest_boat": "Birch Boat with Chest\uEc13\uEa11",
@@ -20,6 +21,17 @@
   "entity.minecraft.cherry_chest_boat": "Cherry Boat with Chest\uEc18\uEa11",
   "entity.minecraft.bamboo_chest_raft": "Bamboo Raft with Chest\uEc19\uEa11",
   "entity.minecraft.pale_oak_chest_boat": "Pale Oak Boat with Chest\uEc20\uEa11",
+  
+  "item.minecraft.oak_chest_boat": "Oak Boat with Chest\uEc11\uEa11",
+  "item.minecraft.spruce_chest_boat": "Spruce Boat with Chest\uEc12\uEa11",
+  "item.minecraft.birch_chest_boat": "Birch Boat with Chest\uEc13\uEa11",
+  "item.minecraft.dark_oak_chest_boat": "Dark Oak Boat with Chest\uEc14\uEa11",
+  "item.minecraft.acacia_chest_boat": "Acacia Boat with Chest\uEc15\uEa11",
+  "item.minecraft.jungle_chest_boat": "Jungle Boat with Chest\uEc16\uEa11",
+  "item.minecraft.mangrove_chest_boat": "Mangrove Boat with Chest\uEc17\uEa11",
+  "item.minecraft.cherry_chest_boat": "Cherry Boat with Chest\uEc18\uEa11",
+  "item.minecraft.bamboo_chest_raft": "Bamboo Raft with Chest\uEc19\uEa11",
+  "item.minecraft.pale_oak_chest_boat": "Pale Oak Boat with Chest\uEc20\uEa11",
 
   "container.crafting": "",
   "container.crafter": "",

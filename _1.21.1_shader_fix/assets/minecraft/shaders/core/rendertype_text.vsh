@@ -1,7 +1,7 @@
-#version 150
+#version 460
 
 #moj_import <fog.glsl>
-#moj_import <minecraft:interfaces.glsl>
+#moj_import <interfaces.glsl>
 
 in vec3 Position;
 in vec4 Color;

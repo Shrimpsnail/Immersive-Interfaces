@@ -1,4 +1,4 @@
-#version 150
+#version 460
 
 #moj_import <interfaces.glsl>
 in vec3 Position;

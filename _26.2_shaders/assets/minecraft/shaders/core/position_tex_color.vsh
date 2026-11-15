@@ -1,4 +1,4 @@
-#version 330
+#version 460
 
 #moj_import <dynamictransforms.glsl>
 #moj_import <globals.glsl>

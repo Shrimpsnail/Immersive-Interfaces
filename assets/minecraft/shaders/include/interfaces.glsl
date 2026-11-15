@@ -1,4 +1,9 @@
+#version 460
 
+
+#ifndef gl_VertexIndex
+#define gl_VertexIndex gl_VertexID
+#endif
 
 struct Data 
 {
