@@ -16,4 +16,4 @@ https://modrinth.com/resourcepack/shrimps-immersive-interfaces
 
 
 > [!NOTE]
-> The required fonts are set in the English (United States) language, if you wish to use your own language you can execute the script created by @Wolphwood in [assets/minecraft/lang/$_langs.bat](https://github.com/Shrimpsnail/Immersive-Interfaces/blob/main/assets/minecraft/lang/%24_langs.bat)
+> The required fonts are set in the Immersive interfaces [DEV] language, if you wish to use your own language you can run the python script present in the pack and give it a vanilla languages folder
